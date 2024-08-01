@@ -4,20 +4,20 @@
 <section class="container flex mx-auto bg-[#F5F5F5] min-w-full min-h-full">
 
     <!-- Start of Hero Section -->
-    <div class="elementor-section elementor-top-section relative flex flex-col mb-16 min-h-full">
-        <div class="elementor-container">
-            <div class="elementor-column btn-login text-center mt-12 mb-2">
+    <div class="elementor-section elementor-top-section relative flex flex-col mb-16 min-h-full top-[60px]">
+        <div class="elementor-container flex flex-col left-1/2 gap-8">
+            <div class="elementor-column btn-login text-center">
                 <a href="#" class="signup-button text-sm text-center font-medium rounded-full text-[#0165FF] bg-[#EEF7FF] py-2 px-4 focus:outline-none max-sm:hidden duration-500">best hosting in the world👜</a>
             </div>
-            <h1 class="elementor-column heading text-center font-extrabold leading-[1.1] text-[#12294A] pt-8 pb-4 xs:mx-6 xs:text-4xl sm:mx-12 sm:text-5xl md:mx-20 md:text-5xl lg:mx-64 lg:text-6xl xl:mx-80 xl:text-6xl">
+            <h1 class="elementor-column heading text-center font-extrabold leading-[1.1] text-[#12294A] xs:mx-6 xs:text-4xl sm:mx-12 sm:text-5xl md:mx-20 md:text-5xl lg:mx-64 lg:text-6xl xl:mx-80 xl:text-6xl">
                 Boost Your Site's <span class="text-[#0165FF]">Performance</span> to the Next Level.
             </h1>
-            <p class="elementor-column richtext text-center font-medium leading-[1.3] text-[#161519] pb-8 pt-4 xs:mx-12 xs:text-base sm:mx-24 sm:text-base md:text-lg md:mx-36 lg:mx-72 lg:text-lg xl:mx-96 xl:text-lg">
+            <p class="elementor-column richtext text-center font-medium leading-[1.3] text-[#161519] xs:mx-12 xs:text-base sm:mx-24 sm:text-base md:text-lg md:mx-36 lg:mx-72 lg:text-lg xl:mx-96 xl:text-lg">
                 Hosting Solutions Worldwide. We provide 24/7 expert support to keep your website running smoothly🎉
             </p>
 
-            <div class="elementor-column btn-login text-center mt-4 mb-8">
-                <a href="#" class="signup-button text-base text-center font-extrabold rounded-full mb-16 text-white bg-[#0165FF] py-4 px-12 focus:outline-none max-sm:hidden duration-500">Our Pricing</a>
+            <div class="elementor-column btn-login flex justify-center text-center">
+                <a href="#" class="signup-button text-base flex items-center text-center font-medium rounded-full mb-16 text-white bg-[#0165FF] py-0 px-6 h-12 w-fit">Our Pricing</a>
             </div>
         </div>
 
@@ -144,11 +144,11 @@
                 <h2 class="heading text-5xl font-bold text-white">End-to-End Hosting Solutions for Your Site's</h2>
             </div>
             <div class="elementor-element btn-contact mt-5">
-                <a href="#" class="signup-button text-base text-center font-bold rounded-full mb-16 text-[#12294A] bg-[#F5F5F5] py-4 px-12 focus:outline-none max-sm:hidden duration-500">Contact Us</a>
+                <a href="#" class="signup-button flex text-base text-center font-bold rounded-full mb-16 text-[#12294A] bg-[#F5F5F5] h-[48px] py-0 px-6 w-fit justify-center items-center">Contact Us</a>
             </div>
         </div>
 
-        <div class="elementor-column accordion flex flex-col px-5">
+        <div class="elementor-column w-3/6 accordion flex flex-col px-5">
             <div class="elementor-element accordion-item relative">
                 <input type="checkbox" id="accordion-1" class="accordion-checkbox appearance-none peer">
                 <label for="accordion-1" class="accordion-button flex flex-row justify-between py-3 px-5 cursor-pointer items-center after:absolute after:content-['+'] after:right-5 after:text-2xl after:font-semibold after:text-white peer-checked:after:transform peer-checked:after:rotate-45 after:duration-300">
@@ -192,12 +192,115 @@
 
 <!-- Start of Services Section -->
 <section class="elementor-section elementor-top-section relative flex bg-[#F5F5F5] min-h-full">
-    <div class="elementor-container">
-        <div class="elementor-column">
+    <div class="elementor-container container mx-auto py-[100px]">
+        <div class="elementor-column text-center">
+            <h2 class="heading text-5xl font-bold text-[#12294A] pb-12">Our Capabilities</h2>
+        </div>
 
+        <div class="elementor-column flex justify-between w-full pb-10 items-center gap-6">
+            <div class="elementor-element flex-none w-3/6 flex-col">
+                <div class="flex flex-col mb-5">
+                    <h2 class="heading text-5xl font-bold text-[#12294A] mb-5">Faster Loading</h2>
+                    <p class="richtext leading-7 text-base">Maximize your website's performance with our Faster Loading Hosting Services. Designed to deliver rapid load times, our hosting solutions use cutting-edge technology, optimized servers, and advanced caching techniques.
+                </div>
+                <div class="elementor-column btn-login">
+                    <a href="#" class="signup-button flex text-base font-medium rounded-full mb-16 text-[#0f39a6] bg-[#EAEDF7] h-[48px] py-0 px-6 w-fit justify-center items-center">Our Pricing</a>
+                </div>
+            </div>
+            <div class="elementor-element w-[40%] flex-col">
+                <img class="w-[444px] h-[444px] rounded-2xl" src="images/img-faq1.png" alt="">
+            </div>
+        </div>
+
+        <div class="elementor-column flex flex-row-reverse justify-between w-full pb-10 items-center gap-6">
+            <div class="elementor-element flex-none w-3/6 flex-col">
+                <div class="flex flex-col mb-5">
+                    <h2 class="heading text-5xl font-bold text-[#12294A] mb-5">Advanced Protection Systems</h2>
+                    <p class="richtext leading-7 text-base">Benefit from advanced firewalls, real-time threat monitoring, and robust DDoS protection that work seamlessly to prevent unauthorized access and cyber-attacks.Trust our Advanced Protection Systems to provide the highest level of security, keeping your website and data secure 24/7.
+                </div>
+                <div class="elementor-column btn-login">
+                    <a href="#" class="signup-button flex text-base font-medium rounded-full mb-16 text-[#0f39a6] bg-[#EAEDF7] h-[48px] py-0 px-6 w-fit justify-center items-center">Our Pricing</a>
+                </div>
+            </div>
+            <div class="elementor-element w-[40%] flex-col">
+                <img class="w-[489px] h-[489px] rounded-2xl" src="images/img-faq2.png" alt="">
+            </div>
         </div>
     </div>
 </section>
 <!-- End of Services Section -->
+
+<!-- Start of Contact Section -->
+<section class="elementor-section elementor-top-section relative flex bg-[#12294A] min-h-full">
+    <div class="elementor-container container mx-auto text-center py-[100px]">
+        <div class="elementor-column flex flex-col items-center">
+            <div class="elementor-element flex flex-col items-center">
+                <p class="richtext leading-7 text-lg text-white pb-4">Still Not Sure What To Get?</p>
+                <h2 class="heading text-5xl font-bold text-white mb-5 max-w-[700px]">Get Discount Up to 60% With The Promo Code</h2>
+            </div>
+            <div class="elementor-element btn-login mt-4">
+                <a href="#" class="signup-button flex text-base font-bold rounded-full text-[#12294A] bg-[#F5F5F5] h-[48px] py-0 px-6 w-fit justify-center items-center">Our Pricing</a>
+            </div>
+        </div>
+    </div>
+</section>
+<!-- End of Contact Section -->
+
+<!-- Start of Footer Section -->
+<footer class="elementor-section elementor-top-section relative flex flex-col bg-[#F5F5F5] min-h-full">
+    <div class="elementor-container flex container mx-auto max-w-5xl text-center px-0 pb-16">
+        <div class="footer-content flex justify-between w-full text-left pt-40">
+            <div class="left-footer flex flex-col">
+                <div class="flex pb-6">
+                    <img class="h-5 w-auto" src="images/img-icon.png" alt="hostfun">
+                </div>
+                <div class="footer-tagline">
+                    <p class="richtext leading-7 text-base">Partnership@hostfun.com</p>
+                    <p class="richtext leading-7 text-base">Araya, Malang Regency</p>
+                    <p class="richtext leading-7 text-base">East Java, INA 65152</p>
+                </div>
+                <div class="footer-socmed flex gap-2 pt-8 justify-center overflow-hidden">
+                    <a href="#" class="flex border-2 w-12 h-12 border-[#ededef] rounded-full justify-center transition">
+                        <i class="socmed-icon fa-brands fa-dribbble fa-lg"></i>
+                    </a>
+                    <a href="#" class="flex border-2 w-12 h-12 border-[#ededef] rounded-full justify-center transition">
+                        <i class="socmed-icon fa-brands fa-instagram fa-lg"></i>
+                    </a>
+                    <a href="#" class="flex border-2 w-12 h-12 border-[#ededef] rounded-full justify-center transition">
+                        <i class="socmed-icon fa-brands fa-facebook-f fa-lg"></i>
+                    </a>
+                    <a href="#" class="flex border-2 w-12 h-12 border-[#ededef] rounded-full justify-center transition">
+                        <i class="socmed-icon fa-brands fa-twitter fa-lg"></i>
+                    </a>
+                    <a href="#" class="flex border-2 w-12 h-12 border-[#ededef] rounded-full justify-center transition">
+                        <i class="socmed-icon fa-brands fa-linkedin-in fa-lg"></i>
+                    </a>
+                </div>
+            </div>
+            <div class="right-footer flex flex-col gap-2 w-[25%]">
+                <div class="menu-container">
+                    <ul class="menu-secondary flex flex-col gap-4">
+                        <li class="px-2 pt-1">
+                            <a class="richtext leading-7 text-base text-[#020b1f]" href="#">Home</a>
+                        </li>
+                        <li class="px-2 pt-1">
+                            <a class="richtext leading-7 text-base text-[#020b1f]" href="#">Hosting</a>
+                        </li>
+                        <li class="px-2 pt-1">
+                            <a class="richtext leading-7 text-base text-[#020b1f]" href="#">Domain</a>
+                        </li>
+                        <li class="px-2 pt-1">
+                            <a class="richtext leading-7 text-base text-[#020b1f]" href="#">Contact</a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="site-footer-copyright flex justify-center items-center w-full pt-7 pb-6">
+        <p class="richtext leading-7 text-base text-[#020b1f]">2024 © Hostfun. All rights reserved.</p>
+    </div>
+</footer>
+<!-- End of Footer Section -->
 
 @endsection
