@@ -9,10 +9,10 @@
             <div class="elementor-column btn-login text-center">
                 <a href="#" class="signup-button text-sm text-center font-medium rounded-full text-[#0165FF] bg-[#EEF7FF] py-2 px-4 focus:outline-none max-sm:hidden duration-500">best hosting in the world👜</a>
             </div>
-            <h1 class="elementor-column heading text-center font-extrabold leading-[1.1] text-[#12294A] xs:mx-6 xs:text-4xl sm:mx-12 sm:text-5xl md:mx-20 md:text-5xl lg:mx-64 lg:text-6xl xl:mx-80 xl:text-6xl">
+            <h1 class="elementor-column heading text-center font-extrabold leading-[1.1] text-[#12294A] xs:mx-6 xs:text-4xl sm:mx-12 sm:text-5xl md:mx-20 md:text-5xl lg:mx-64 lg:text-5xl xl:mx-80 xl:text-6xl">
                 Boost Your Site's <span class="text-[#0165FF]">Performance</span> to the Next Level.
             </h1>
-            <p class="elementor-column richtext text-center font-medium leading-[1.3] text-[#161519] xs:mx-12 xs:text-base sm:mx-24 sm:text-base md:text-lg md:mx-36 lg:mx-72 lg:text-lg xl:mx-96 xl:text-lg">
+            <p class="elementor-column richtext text-center font-medium leading-[1.3] text-[#161519] xs:mx-12 xs:text-base sm:mx-24 sm:text-base md:text-base md:mx-36 lg:mx-72 lg:text-base xl:mx-96 xl:text-lg">
                 Hosting Solutions Worldwide. We provide 24/7 expert support to keep your website running smoothly🎉
             </p>
 
@@ -96,37 +96,37 @@
 
 <!-- Start of About Section -->
 <section class="elementor-section elementor-top-section relative flex bg-[#F5F5F5] min-h-full">
-    <div class="elementor-container flex pl-20 pr-28 py-10 my-10">
-        <div class="elementor-column flex-none w-3/6">
-            <img class="w-[560px] h-96 rounded-2xl" src="images/img-aboutus.png" alt="">
+    <div class="elementor-container flex container mx-auto min-h-full min-w-full justify-center pl-20 pr-28 py-10 my-14 xs:flex-col xs:px-10 xs:mx-0 xs:my-10 xs:py-5 sm:flex-col sm:px-10 sm:mx-0 sm:my-10 sm:py-5 md:flex-col md:px-20 md:mx-0 md:my-10 md:py-5">
+        <div class="elementor-column flex-none w-3/6 text-center xs:w-full xs:shrink-0 sm:w-full sm:shrink-0 md:w-full md:shrink-0 md:px-5">
+            <img class="max-w-full h-auto rounded-2xl object-cover" src="images/img-aboutus.png" alt="">
         </div>
 
-        <div class="elementor-column flex-none w-3/6 flex-col ml-10">
-            <div class="elementor-widget-container">
-                <h2 class="heading text-5xl font-bold text-[#12294A]">What we provide:</h2>
-                <p class="richtext my-4 leading-7"><strong>Hostfun.</strong> has partnered with other companies and individuals from multiple industries to ensure that our services are not limited but growing. By helping brands navigate rapidly changing markets and pushing emerging businesses to be heard, we aim to create a solid digital communication that matters.</p>
+        <div class="elementor-column flex-none w-3/6 flex-col ml-10 xs:m-0 xs:my-8 xs:flex xs:w-full sm:m-0 sm:my-8 sm:flex sm:w-full md:m-0 md:my-8 md:flex md:w-full">
+            <div class="elementor-widget-container md:px-5">
+                <h2 class="heading text-5xl font-bold text-[#12294A] xs:text-4xl sm:text-4xl md:text-4xl lg:text-4xl">What we provide:</h2>
+                <p class="richtext my-4 leading-7 text-base"><strong>Hostfun.</strong> has partnered with other companies and individuals from multiple industries to ensure that our services are not limited but growing. By helping brands navigate rapidly changing markets and pushing emerging businesses to be heard, we aim to create a solid digital communication that matters.</p>
             </div>
 
-            <div class="elementor-widget-wrap pt-5 w-auto flex flex-row justify-between">
+            <div class="elementor-widget-wrap pt-5 w-auto flex flex-row gap-8 md:px-5">
                 <div class="elementor-element border-solid border-t-[1.5px] border-[#635D6FA6]">
                     <div class="elementor-widget-container pt-8">
-                        <span class="number heading text-5xl font-medium text-[#12294A]">1</span>
-                        <span class="heading text-4xl font-bold text-[#12294A]">Billion</span>
-                        <span class="heading text-3xl font-black text-[#12294A]">+</span>
+                        <span class="number heading text-5xl font-medium text-[#12294A] xs:text-4xl">1</span>
+                        <span class="heading text-4xl font-bold text-[#12294A] xs:text-3xl">Billion</span>
+                        <span class="heading text-3xl font-black text-[#12294A] xs:text-2xl">+</span>
                     </div>
                     <span class="richtext text-[#7A7A7A] text-base">Views</span>
                 </div>
                 <div class="elementor-element border-solid border-t-[1.5px] border-[#635D6FA6]">
                     <div class="elementor-widget-container pt-8">
-                        <span class="number heading text-5xl font-medium text-[#12294A]">18</span>
-                        <span class="heading text-3xl font-black text-[#12294A]">+</span>
+                        <span class="number heading text-5xl font-medium text-[#12294A] xs:text-4xl lg:text-4xl">18</span>
+                        <span class="heading text-3xl font-black text-[#12294A] xs:text-2xl lg:text-2xl">+</span>
                     </div>
                     <span class="richtext text-[#7A7A7A] text-base">Digital Product</span>
                 </div>
                 <div class="elementor-element border-solid border-t-[1.5px] border-[#635D6FA6]">
                     <div class="elementor-widget-container pt-8">
-                        <span class="number heading text-5xl font-medium text-[#12294A]">150</span>
-                        <span class="heading text-3xl font-black text-[#12294A]">+</span>
+                        <span class="number heading text-5xl font-medium text-[#12294A] xs:text-4xl lg:text-4xl">150</span>
+                        <span class="heading text-3xl font-black text-[#12294A] xs:text-2xl lg:text-2xl">+</span>
                     </div>
                     <span class="richtext text-[#7A7A7A] text-base">Brands Collaboration</span>
                 </div>

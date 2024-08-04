@@ -37,7 +37,7 @@
             <span id="nav-label" class="hidden">Navigation</span>
 
             <!-- Start hamburger menu -->
-            <button id="btnOpen" aria-expanded="false" aria-labelledby="nav-label" class="topnav__open mx-8 my-4 px-1 rounded-full h-14 w-14 bg-[#12294A] items-center text-white xs:mx-0 xs:w-11 xs:h-11 sm:mx-0 sm:w-12 sm:h-12 md:w-12 md:h-12 lg:hidden xl:hidden">
+            <button id="btnOpen" aria-expanded="false" aria-labelledby="nav-label" class="topnav__open mx-8 my-4 px-1 rounded-full h-14 w-14 bg-[#12294A] items-center text-white xs:mx-0 xs:w-11 xs:h-11 sm:mx-0 sm:w-12 sm:h-12 md:w-12 md:h-12 md:ml-8 md:mr-0 lg:hidden xl:hidden">
                 <i class="fa-solid fa-bars fa-xl"></i>
             </button>
             <!-- End hamburger menu to open topnav__menu -->
