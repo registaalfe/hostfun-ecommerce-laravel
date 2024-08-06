@@ -110,8 +110,8 @@
             <div class="elementor-widget-wrap pt-5 w-auto flex flex-row gap-8 md:px-5">
                 <div class="elementor-element border-solid border-t-[1.5px] border-[#635D6FA6]">
                     <div class="elementor-widget-container pt-8">
-                        <span class="number heading text-5xl font-medium text-[#12294A] xs:text-4xl">1</span>
-                        <span class="heading text-4xl font-bold text-[#12294A] xs:text-3xl">Billion</span>
+                        <span class="number heading text-4xl font-medium text-[#12294A] xs:text-4xl">1</span>
+                        <span class="heading text-4xl font-medium text-[#12294A] xs:text-3xl">Billion</span>
                         <span class="heading text-3xl font-black text-[#12294A] xs:text-2xl">+</span>
                     </div>
                     <span class="richtext text-[#7A7A7A] text-base">Views</span>

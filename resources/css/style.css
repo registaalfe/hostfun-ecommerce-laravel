@@ -56,9 +56,9 @@
     transition: translate 0.5s ease-in-out;
   }
 }
-@media (width < 1024px) {
+@media (width < 1025px) {
   .topnav__menu {
-    translate: 200vw 0;
+    translate: 300vw 0;
     transition: translate 0.5s ease-in-out;
   }
 }

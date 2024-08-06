@@ -63,8 +63,8 @@
             transition: translate 0.5s ease-in-out;
         }
 
-        @media (width < 1024px) {
-            translate: 200vw 0;
+        @media (width < 1025px) {
+            translate: 300vw 0;
             transition: translate 0.5s ease-in-out;
         }
     }
