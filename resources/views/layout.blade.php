@@ -53,20 +53,20 @@
 
                 <ul class="topnav__links flex gap-10 xs:gap-4 xs:flex-col sm:gap-4 sm:flex-col md:gap-4 md:flex-col lg:self-center xl:self-center">
                     <li class="topnav__item">
-                        <a href="#" class="topnav__link text-[#161519] text-base font-light hover:text-[#525252] xs:text-xl xs:text-left xs:text-white sm:text-xl sm:text-white sm:text-left md:text-xl md:text-white md:text-left lg:font-medium xl:font-medium">Home</a>
+                        <a href="#" class="topnav__link text-[#161519] text-base font-light hover:text-[#525252] xs:text-lg xs:text-left xs:text-white sm:text-lg sm:text-white sm:text-left md:text-lg md:text-white md:text-left lg:font-medium xl:font-medium">Home</a>
                     </li>
                     <li class="topnav__item">
-                        <a href="#" class="topnav__link text-[#161519] text-base font-light hover:text-[#525252] xs:text-xl xs:text-left xs:text-white sm:text-xl sm:text-white sm:text-left md:text-xl md:text-white md:text-left lg:font-medium xl:font-medium">Hosting</a>
+                        <a href="#" class="topnav__link text-[#161519] text-base font-light hover:text-[#525252] xs:text-lg xs:text-left xs:text-white sm:text-lg sm:text-white sm:text-left md:text-lg md:text-white md:text-left lg:font-medium xl:font-medium">Hosting</a>
                     </li>
                     <li class="topnav__item">
-                        <a href="#" class="topnav__link text-[#161519] text-base font-light hover:text-[#525252] xs:text-xl xs:text-left xs:text-white sm:text-xl sm:text-white sm:text-left md:text-xl md:text-white md:text-left lg:font-medium xl:font-medium">Domain</a>
+                        <a href="#" class="topnav__link text-[#161519] text-base font-light hover:text-[#525252] xs:text-lg xs:text-left xs:text-white sm:text-lg sm:text-white sm:text-left md:text-lg md:text-white md:text-left lg:font-medium xl:font-medium">Domain</a>
                     </li>
                     <li class="topnav__item">
-                        <a href="#" class="topnav__link text-[#161519] text-base font-light hover:text-[#525252] xs:text-xl xs:text-left xs:text-white sm:text-xl sm:text-white sm:text-left md:text-xl md:text-white md:text-left lg:font-medium xl:font-medium">Contact</a>
+                        <a href="#" class="topnav__link text-[#161519] text-base font-light hover:text-[#525252] xs:text-lg xs:text-left xs:text-white sm:text-lg sm:text-white sm:text-left md:text-lg md:text-white md:text-left lg:font-medium xl:font-medium">Contact</a>
                     </li>
                 </ul>
                 <div class="site-footer-copyright flex items-center w-full pt-7 pb-6 lg:hidden xl:hidden">
-                    <p class="richtext leading-7 text-lg font-light text-white">2024 © <span class="font-bold">Hostfun.</span> All rights reserved.</p>
+                    <p class="richtext leading-7 text-base font-light text-white">2024 © <span class="font-bold">Hostfun.</span> All rights reserved.</p>
                 </div>
             </div>
             <!-- End show/hide menu -->
