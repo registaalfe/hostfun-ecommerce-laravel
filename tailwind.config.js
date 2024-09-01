@@ -1,4 +1,6 @@
 /** @type {import('tailwindcss').Config} */
+const defaultTheme = require("tailwindcss/defaultTheme");
+
 export default {
     content: [
         "./src/**/*.{html,js}",
@@ -29,6 +31,13 @@ export default {
             xl: { min: "1281px", max: "1535px" },
             // => @media (min-width: 1280px and max-width: 1535px) { ... }
         },
+        fontFamily: {
+            volkorn: ["Vollkorn", "serif"],
+            karla: ["Karla", "sans - serif"],
+        },
+    },
+    corePlugins: {
+        opacity: false,
     },
     plugins: [],
 };

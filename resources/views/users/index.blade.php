@@ -1,4 +1,4 @@
-@extends('layout')
+@extends('users.layout')
 
 @section('content')
 <section class="elementor-section elementor-top-section container flex mx-auto bg-[#F5F5F5] min-w-full min-h-full">
@@ -9,10 +9,10 @@
             <div class="elementor-column btn-login text-center">
                 <a href="#" class="signup-button text-sm text-center font-medium rounded-full text-[#0165FF] bg-[#EEF7FF] py-2 px-4 focus:outline-none max-sm:hidden duration-500">best hosting in the world👜</a>
             </div>
-            <h1 class="elementor-column heading text-center text-5xl font-extrabold leading-[1.1] text-[#12294A] xs:mx-6 xs:text-4xl sm:mx-12 sm:text-5xl md:mx-20 md:text-5xl lg:mx-64">
+            <h1 class="elementor-column heading text-center text-5xl font-extrabold leading-[1.1] text-[#12294A] xs:mx-6 xs:text-4xl sm:mx-12 sm:text-5xl md:mx-20 md:text-5xl lg:mx-64 xl:mx-64">
                 Boost Your Site's <span class="text-[#0165FF]">Performance</span> to the Next Level.
             </h1>
-            <p class="elementor-column richtext text-center font-medium leading-[1.3] text-[#161519] xs:mx-12 xs:text-sm sm:mx-24 sm:text-sm md:text-base md:mx-36 lg:mx-72 lg:text-base">
+            <p class="elementor-column richtext text-center font-medium leading-[1.3] text-[#161519] xs:mx-12 xs:text-sm sm:mx-24 sm:text-sm md:text-base md:mx-36 lg:mx-72 lg:text-base xl:mx-96 xl:text-base">
                 Hosting Solutions Worldwide. We provide 24/7 expert support to keep your website running smoothly🎉
             </p>
 
@@ -198,7 +198,7 @@
         </div>
 
         <div class="elementor-column flex flex-row justify-between w-full pb-10 items-center gap-12 xs:flex-col xs:border xs:border-gray-200 xs:rounded-xl xs:pb-0 sm:flex-col sm:border sm:border-gray-200 sm:rounded-xl sm:pb-0 md:flex-col md:border md:border-gray-200 md:rounded-xl md:pb-0">
-            <div class="elementor-element flex flex-col xs:text-left xs:w-full xs:px-4 xs:py-5 sm:text-left sm:w-full sm:px-4 sm:py-5 md:text-left md:w-full md:px-4 md:py-5 lg:w-3/6">
+            <div class="elementor-element flex flex-col xs:text-left xs:w-full xs:px-4 xs:py-5 sm:text-left sm:w-full sm:px-4 sm:py-5 md:text-left md:w-full md:px-4 md:py-5 lg:w-3/6 xl:w-3/6">
                 <div class="flex flex-col mb-5">
                     <h2 class="heading text-3xl font-bold text-[#12294A] mb-5 xs:text-2xl sm:text-2xl md:text-2xl">Faster Loading</h2>
                     <p class="richtext leading-7 text-base xs:text-sm xs:w-72 sm:text-sm sm:w-72 md:w-72">Maximize your website's performance with our Faster Loading Hosting Services. Designed to deliver rapid load times, our hosting solutions use cutting-edge technology, optimized servers, and advanced caching techniques.
@@ -206,17 +206,17 @@
                 <div class="elementor-column flex btn-login xs:order-3 sm:order-3 md:order-3">
                     <a href="#" class="signup-button flex text-base font-medium rounded-full mb-16 text-[#0f39a6] bg-[#EAEDF7] h-[48px] py-0 px-6 w-fit justify-center items-center xs:mb-0 xs:text-sm sm:text-sm sm:mb-0 md:mb-0">Our Pricing</a>
                 </div>
-                <div class="elementor-element flex flex-col xs:order-2 sm:order-2 md:order-2 lg:hidden">
+                <div class="elementor-element flex flex-col xs:order-2 sm:order-2 md:order-2 lg:hidden xl:hidden">
                     <img class="w-[449px] h-[449px] rounded-2xl" src="images/img-faq1.png" alt="">
                 </div>
             </div>
-            <div class="elementor-element w-[40%] flex-col xs:hidden sm:hidden md:hidden lg:w-3/6">
+            <div class="elementor-element w-[40%] flex-col xs:hidden sm:hidden md:hidden lg:w-3/6 xl:w-3/6">
                 <img class="w-[489px] h-auto rounded-2xl" src="images/img-faq1.png" alt="">
             </div>
         </div>
 
-        <div class="elementor-column flex flex-row justify-between w-full pb-10 items-center gap-12 xs:flex-col xs:border xs:border-gray-200 xs:rounded-xl xs:pb-0 sm:flex-col sm:border sm:border-gray-200 sm:rounded-xl sm:pb-0 md:flex-col md:border md:border-gray-200 md:rounded-xl md:pb-0 lg:flex-row-reverse">
-            <div class="elementor-element flex flex-col xs:text-left xs:w-full xs:px-4 xs:py-5 sm:text-left sm:w-full sm:px-4 sm:py-5 md:text-left md:w-full md:px-4 md:py-5 lg:w-3/6">
+        <div class="elementor-column flex flex-row justify-between w-full pb-10 items-center gap-12 xs:flex-col xs:border xs:border-gray-200 xs:rounded-xl xs:pb-0 sm:flex-col sm:border sm:border-gray-200 sm:rounded-xl sm:pb-0 md:flex-col md:border md:border-gray-200 md:rounded-xl md:pb-0 lg:flex-row-reverse xl:flex-row-reverse">
+            <div class="elementor-element flex flex-col xs:text-left xs:w-full xs:px-4 xs:py-5 sm:text-left sm:w-full sm:px-4 sm:py-5 md:text-left md:w-full md:px-4 md:py-5 lg:w-3/6 xl:w-3/6">
                 <div class="flex flex-col mb-5">
                     <h2 class="heading text-3xl font-bold text-[#12294A] mb-5 xs:text-2xl sm:text-2xl md:text-2xl">Advanced Protection Systems</h2>
                     <p class="richtext leading-7 text-base xs:text-sm xs:w-72 sm:text-sm sm:w-72 md:w-72">Benefit from advanced firewalls, real-time threat monitoring, and robust DDoS protection that work seamlessly to prevent unauthorized access and cyber-attacks.Trust our Advanced Protection Systems to provide the highest level of security, keeping your website and data secure 24/7.
@@ -224,11 +224,11 @@
                 <div class="elementor-column flex btn-login xs:order-3 sm:order-3 md:order-3">
                     <a href="#" class="signup-button flex text-base font-medium rounded-full mb-16 text-[#0f39a6] bg-[#EAEDF7] h-[48px] py-0 px-6 w-fit justify-center items-center xs:mb-0 xs:text-sm sm:text-sm sm:mb-0 md:mb-0">Our Pricing</a>
                 </div>
-                <div class="elementor-element flex flex-col xs:order-2 sm:order-2 md:order-2 lg:hidden">
+                <div class="elementor-element flex flex-col xs:order-2 sm:order-2 md:order-2 lg:hidden xl:hidden">
                     <img class="w-[449px] h-[449px] rounded-2xl" src="images/img-faq2.png" alt="">
                 </div>
             </div>
-            <div class="elementor-element w-[40%] flex-col xs:hidden sm:hidden md:hidden lg:w-3/6">
+            <div class="elementor-element w-[40%] flex-col xs:hidden sm:hidden md:hidden lg:w-3/6 xl:w-3/6">
                 <img class="w-[489px] h-auto rounded-2xl" src="images/img-faq2.png" alt="">
             </div>
         </div>
@@ -245,7 +245,7 @@
                 <h2 class="heading text-5xl font-bold text-white mb-5 max-w-[700px] xs:text-3xl xs:mx-36 sm:text-3xl sm:mx-36 md:text-4xl md:mx-36">Get Discount Up to 60% With The Promo Code</h2>
             </div>
             <div class="elementor-element btn-login mt-4">
-                <a href="#" class="signup-button flex text-base font-bold rounded-full text-[#12294A] bg-[#F5F5F5] h-[48px] py-0 px-6 w-fit justify-center items-center">Our Pricing</a>
+                <a href="#" class="signup-button flex text-base font-semibold rounded-full text-[#12294A] bg-[#F5F5F5] h-[48px] py-0 px-6 w-fit justify-center items-center xs:text-sm xs:h-[42px] sm:text-sm sm:h-[42px]">Our Pricing</a>
             </div>
         </div>
     </div>
@@ -301,7 +301,7 @@
                     </ul>
                 </div>
 
-                <div class="footer-socmed flex gap-2 pt-8 justify-center overflow-hidden lg:hidden">
+                <div class="footer-socmed flex gap-2 pt-8 justify-center overflow-hidden lg:hidden xl:hidden">
                     <a href="#" class="flex border-2 w-12 h-12 border-[#ededef] rounded-full justify-center transition">
                         <i class="socmed-icon fa-brands fa-dribbble fa-lg"></i>
                     </a>
