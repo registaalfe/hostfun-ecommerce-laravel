@@ -37,9 +37,7 @@
         <!-- end: Header -->
 
         <!-- start: Content -->
-        <div class="elementor-section flex flex-col p-8">
-            {{ $slot }}
-        </div>
+        {{ $slot }}
         <!-- end: Content -->
     </main>
     <!-- end: Main -->

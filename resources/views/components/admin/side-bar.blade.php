@@ -1,16 +1,16 @@
     <!-- Nothing in life is to be feared, it is only to be understood. Now is the time to understand more, so that we may fear less. - Marie Curie -->
     <div id="sidebar"
-        class="fixed left-0 top-0 h-full z-50 p-4 bg-white shadow-lg sidebar-expanded transition-all duration-300">
-        <div class="flex justify-center items-center px-4 py-4 border-b">
+        class="fixed left-0 top-0 h-full z-50 px-8 pb-8 pt-3 bg-[#0165FF] shadow-lg sidebar-expanded transition-all duration-300">
+        <div class="flex justify-center items-center py-4 border-b">
             <div class="flex items-center">
-                <img class="h-6 w-auto" src="/images/icon2.png" alt="hostfun">
-                <h2 class="nav-link-text font-karla text-xl text-gray-800 font-bold pl-3">Hostfun</h2>
+                <img class="h-6 w-auto" src="/images/icon.png" alt="hostfun">
+                <h2 class="nav-link-text font-karla text-xl text-white font-bold pl-2">Hostfun</h2>
             </div>
         </div>
 
-        <nav class="flex-1 px-2 py-4 space-y-1 bg-white">
-            <a href="#"
-                class="flex items-center px-6 py-2 text-sm font-medium text-gray-600 rounded-lg hover:bg-[#E9F5FE] hover:text-[#0165FF]">
+        <nav class="flex-1 px-2 py-4 space-y-1 bg-[#0165FF]">
+            <a href="/admin/dashboard"
+                class="flex items-center px-6 py-2 text-sm font-medium text-white rounded-lg hover:bg-[#12294A]">
                 <span class="nav-link-icon">
                     <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24">
                         <path fill="currentColor" fill-rule="evenodd"
@@ -20,8 +20,8 @@
                 </span>
                 <span class="nav-link-text font-karla pl-2">Dashboard</span>
             </a>
-            <a href="#"
-                class="flex items-center px-6 py-2 text-sm font-medium text-gray-600 rounded-lg hover:bg-[#E9F5FE] hover:text-[#0165FF]">
+            <a href="/admin/category"
+                class="flex items-center px-6 py-2 text-sm font-medium text-white rounded-lg hover:bg-[#12294A]">
                 <span class="nav-link-icon">
                     <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24">
                         <path fill="currentColor"
@@ -31,7 +31,7 @@
                 <span class="nav-link-text font-karla pl-2">Category</span>
             </a>
             <a href="#"
-                class="flex items-center px-6 py-2 text-sm font-medium text-gray-600 rounded-lg hover:bg-[#E9F5FE] hover:text-[#0165FF]">
+                class="flex items-center px-6 py-2 text-sm font-medium text-white rounded-lg hover:bg-[#12294A]">
                 <span class="nav-link-icon">
                     <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24">
                         <path fill="currentColor"
@@ -41,7 +41,7 @@
                 <span class="nav-link-text font-karla pl-2">Product</span>
             </a>
             <a href="#"
-                class="flex items-center px-6 py-2 text-sm font-medium text-gray-600 rounded-lg hover:bg-[#E9F5FE] hover:text-[#0165FF]">
+                class="flex items-center px-6 py-2 text-sm font-medium text-white rounded-lg hover:bg-[#12294A]">
                 <span class="nav-link-icon">
                     <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 1024 1024">
                         <path fill="currentColor"
@@ -54,7 +54,7 @@
         </nav>
         <div class="px-2 py-4 border-t">
             <a href="#"
-                class="flex items-center px-6 py-2 text-sm font-medium text-gray-600 rounded-lg hover:bg-[#E9F5FE] hover:text-[#0165FF]">
+                class="flex items-center px-6 py-2 text-sm font-medium text-white rounded-lg hover:bg-[#12294A]">
                 <span class="nav-link-icon">
                     <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24">
                         <path fill="currentColor"
