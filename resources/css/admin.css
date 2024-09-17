@@ -5,4 +5,32 @@
   .container-xs {
     max-width: 641px;
   }
+}
+.sidebar-collapsed {
+  width: 6rem;
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+}
+.sidebar-collapsed .nav-link-text,
+.sidebar-collapsed .sidebar-title {
+  display: none;
+}
+.sidebar-expanded {
+  width: 16rem;
+}
+.sidebar-expanded .nav-link-text,
+.sidebar-expanded .sidebar-title {
+  display: inline;
+}
+
+.header-expanded {
+  margin-left: 256px;
+}
+.header-collapsed {
+  margin-left: 94px;
+}
+
+.transition-all {
+  transition: all 0.3s ease;
 }/*# sourceMappingURL=admin.css.map */

@@ -7,3 +7,41 @@
         max-width: 641px;
     }
 }
+
+.sidebar {
+    &-collapsed {
+        width: 6rem;
+        display: flex;
+        align-items: center;
+        flex-direction: column;
+
+        .nav-link-text,
+        .sidebar-title {
+            display: none;
+        }
+    }
+
+    &-expanded {
+        width: 16rem;
+
+        .nav-link-text,
+        .sidebar-title {
+            display: inline;
+        }
+    }
+}
+
+.header {
+    &-expanded {
+        margin-left: 256px;
+    }
+
+    &-collapsed {
+        margin-left: 94px;
+    }
+}
+
+// Transition for smooth movement
+.transition-all {
+    transition: all 0.3s ease;
+}

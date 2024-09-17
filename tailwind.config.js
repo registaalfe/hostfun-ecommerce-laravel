@@ -33,7 +33,7 @@ export default {
         },
         fontFamily: {
             volkorn: ["Vollkorn", "serif"],
-            karla: ["Karla", "sans - serif"],
+            karla: ["Karla", "serif"],
         },
     },
     corePlugins: {

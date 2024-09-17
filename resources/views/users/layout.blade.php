@@ -52,12 +52,10 @@
             <div role="dialog" aria-labelledby="nav-label"
                 class="topnav__menu xs:px-12 xs:z-[9999999] xs:bg-[#12294A] xs:fixed xs:inset-0 sm:px-12 sm:z-[9999999] sm:bg-[#12294A] sm:fixed sm:inset-0 md:px-12 md:z-[9999999] md:bg-[#12294A] md:fixed md:inset-0 lg:self-center xl:self-center">
 
-                <!-- Start close menu -->
                 <button id="btnClose" aria-label="Close"
                     class="topnav_close p-8 text-white flex xs:relative xs:left-[90%] xs:top-[2%] sm:relative sm:left-[90%] sm:top-[3%] md:relative md:left-[90%] md:top-[2%] lg:hidden xl:hidden">
                     <i class="fa-solid fa-xmark fa-xl"></i>
                 </button>
-                <!-- End close menu -->
 
                 <ul
                     class="topnav__links flex gap-10 xs:gap-4 xs:flex-col sm:gap-4 sm:flex-col md:gap-4 md:flex-col lg:self-center xl:self-center">
