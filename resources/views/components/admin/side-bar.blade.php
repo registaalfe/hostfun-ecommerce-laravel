@@ -30,7 +30,7 @@
                 </span>
                 <span class="nav-link-text font-karla pl-2">Category</span>
             </a>
-            <a href="#"
+            <a href="/admin/product"
                 class="flex items-center px-6 py-2 text-sm font-medium text-white rounded-lg hover:bg-[#12294A]">
                 <span class="nav-link-icon">
                     <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24">

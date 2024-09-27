@@ -3,6 +3,7 @@
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\userController;
 use App\Http\Controllers\adminController;
+use App\Http\Controllers\productController;
 
 Route::get('/', [userController::class, 'index'])->name('users.index');
 
@@ -14,4 +15,8 @@ Route::prefix('admin')->group(function () {
     Route::get('/{categories}/editCategory', [adminController::class, 'editCategory'])->name('admin.editCategory');
     Route::match(['get', 'post'], '/{categories}/update', [adminController::class, 'update'])->name('admin.update');
     Route::delete('/delete{categories}', [adminController::class, 'destroy'])->name('admin.destroy');
+
+    // CRUD Product
+    Route::get('/product', [productController::class, 'index'])->name('admin.product');
+    Route::get('/createProduct', [productController::class, 'createProduct'])->name('admin.createProduct');
 });
