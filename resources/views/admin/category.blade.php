@@ -21,10 +21,6 @@
                                 class="px-6 py-3 font-karla text-left text-sm font-semibold text-[#161519] tracking-wider">
                                 Name
                             </th>
-                            <th
-                                class="px-11 py-3 font-karla text-right text-sm font-semibold text-[#161519] tracking-wider">
-                                Actions
-                            </th>
                         </tr>
                     </thead>
                     <tbody class="bg-white">
@@ -69,7 +65,6 @@
                     </tbody>
                 </table>
             </div>
-
         </div>
     </div>
 </x-layout>
