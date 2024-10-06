@@ -10,10 +10,28 @@
             </a>
         </div>
 
+        <!-- start:Pagination -->
+        <div class="relative inline-block text-left">
+            <div class="origin-top-right flex left-0 mt-6 w-32 rounded-md shadow-lg bg-white ring-1 ring-black ring-opacity-5 focus:outline-none"
+                role="menu" aria-orientation="vertical" aria-labelledby="menu-button" tabindex="-1">
+                <form action="{{ route('admin.showProduct') }}" method="GET">
+                    <select name="perPage" id="perPage"
+                        class="flex justify-center w-[104px] mx-3 my-2 border-none bg-white focus:outline-none focus:ring-indigo-500 focus:border-indigo-500 sm:text-sm"
+                        onchange="this.form.submit()">
+                        <option value="10" {{ request('perPage') == 10 ? 'selected' : '' }}>10 per page</option>
+                        <option value="25" {{ request('perPage') == 25 ? 'selected' : '' }}>25 per page</option>
+                        <option value="50" {{ request('perPage') == 50 ? 'selected' : '' }}>50 per page</option>
+                        <option value="100" {{ request('perPage') == 100 ? 'selected' : '' }}>100 per page</option>
+                    </select>
+                </form>
+            </div>
+        </div>
+        <!-- end:Pagination -->
+
         <div class="flex my-8">
-            <div class="flex justify-between w-full overflow-x-auto shadow-md shadow-black/5">
+            <div class="flex justify-between w-full overflow-x-auto overflow-y-auto max-h-96 shadow-md shadow-black/5">
                 <table class="min-w-full table-auto">
-                    <thead class="bg-[#F7F9FB] border">
+                    <thead class="bg-[#F7F9FB] border sticky -top-0.5 z-999999">
                         <tr>
                             <th class="px-6 py-3 w-0 text-left text-sm text-[#161519] tracking-wider">
                                 <input type="checkbox" class="form-checkbox h-4 w-4 text-0165FF">
@@ -30,7 +48,9 @@
                                 class="px-6 py-3 font-karla text-left text-sm font-semibold text-[#161519] tracking-wider">
                                 Price Product
                             </th>
-
+                            <th
+                                class="px-6 py-3 font-karla text-left text-sm font-semibold text-[#161519] tracking-wider">
+                            </th>
                         </tr>
                     </thead>
                     <tbody class="bg-white">
@@ -81,6 +101,9 @@
                     </tbody>
                 </table>
             </div>
+
         </div>
+
+
     </div>
 </x-layout>

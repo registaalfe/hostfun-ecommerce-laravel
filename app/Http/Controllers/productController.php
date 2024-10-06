@@ -9,9 +9,13 @@ use App\Models\Product;
 
 class productController extends Controller
 {
-    public function showProduct()
+    public function showProduct(Request $request)
     {
-        $products = Product::with('category')->get();
+        // Mengambil jumlah data per halaman dari query string
+        $perPage = $request->input('perPage', 10); // Default 10 jika tidak ada parameter
+
+        // Mengambil semua produk dengan pagination
+        $products = Product::with('category')->latest()->paginate($perPage); //Pagination untuk untuk menghindari mengambil terlalu banyak data sekaligus 
         return view('admin.product', compact('products'));
     }
 
