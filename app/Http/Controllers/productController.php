@@ -15,7 +15,7 @@ class productController extends Controller
         $perPage = $request->input('perPage', 10); // Default 10 jika tidak ada parameter
 
         // Mengambil semua produk dengan pagination
-        $products = Product::with('category')->latest()->paginate($perPage); //Pagination untuk untuk menghindari mengambil terlalu banyak data sekaligus 
+        $products = Product::with('category')->filter(request(['search']))->latest()->paginate($perPage); //Pagination untuk untuk menghindari mengambil terlalu banyak data sekaligus 
         return view('admin.product', compact('products'));
     }
 

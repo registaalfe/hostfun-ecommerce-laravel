@@ -2,9 +2,10 @@
 
 namespace App\Models;
 
-use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Database\Eloquent\Model;
+use Illuminate\Database\Eloquent\Builder;
 use Illuminate\Database\Eloquent\Relations\BelongsTo;
+use Illuminate\Database\Eloquent\Factories\HasFactory;
 
 class Product extends Model
 {
@@ -24,5 +25,18 @@ class Product extends Model
     public function category(): BelongsTo
     {
         return $this->belongsTo(CategoryProduct::class, 'category_id');
+    }
+
+    // Feature Search
+    public function scopeFilter(Builder $query, array $filters): void
+    {
+        $query->when(
+            $filters['search'] ?? false,
+            function ($query, $search) {
+                $query->where('name_product', 'like', '%' . $search . '%')->orWhereHas('category', function ($query) use ($search) {
+                    $query->where('name', 'like', '%' . $search . '%');
+                });
+            }
+        );
     }
 }

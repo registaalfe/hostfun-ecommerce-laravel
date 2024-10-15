@@ -47,6 +47,7 @@
     <script src="{{ asset('js/createAlert.js') }}"></script>
     <script src="{{ asset('js/editAlert.js') }}"></script>
     <script src="{{ asset('js/deleteAlert.js') }}"></script>
+    <script src="{{ asset('js/toggleDropdown.js') }}"></script>
 
 </body>
 

@@ -1,5 +1,5 @@
 <x-layout>
-    <div class="elementor-section flex flex-col p-8">
+    <div class="elementor-section flex flex-col p-8 bg-[#F7F9FB]">
         <h1 class="text-2xl font-medium text-gray-800">Dashboard</h1>
 
         <div class="elementor-column flex my-6 gap-3 xs:flex-col sm:flex-col md:flex-row">
@@ -71,5 +71,4 @@
             </div>
         </div>
     </div>
-
 </x-layout>
