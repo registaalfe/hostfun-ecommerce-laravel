@@ -7,7 +7,7 @@ use App\Models\CategoryProduct;
 use App\Models\Product;
 
 
-class productController extends Controller
+class ProductController extends Controller
 {
     public function showProduct(Request $request)
     {
@@ -16,13 +16,13 @@ class productController extends Controller
 
         // Mengambil semua produk dengan pagination
         $products = Product::with('category')->filter(request(['search']))->latest()->paginate($perPage); //Pagination untuk untuk menghindari mengambil terlalu banyak data sekaligus 
-        return view('admin.product', compact('products'));
+        return view('admin.product.index', compact('products', 'perPage'));
     }
 
     public function createProduct()
     {
         $categories = CategoryProduct::all(); // Fetch all categories
-        return view('admin.createProduct', compact('categories'));
+        return view('admin.product.create', compact('categories'));
     }
 
     public function storeProduct(Request $request)
@@ -53,7 +53,7 @@ class productController extends Controller
         $product = Product::findOrFail($id);
         // dd($id, $product->get());
 
-        return view('admin.editProduct', compact('product', 'categories'));
+        return view('admin.product.edit', compact('product', 'categories'));
     }
 
     public function updateProduct(Request $request, $id)

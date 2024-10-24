@@ -1,4 +1,4 @@
-<x-layout>
+<x-admin.layout>
     <div class="elementor-section flex flex-col px-8 py-2">
         <h1 class="text-2xl font-semibold text-[#161519]">Create Category</h1>
         <form id="createCategoryForm" action="{{ route('admin.store') }}" method="POST">
@@ -19,4 +19,4 @@
                 type="submit" id="createButton">Submit</button>
         </form>
     </div>
-</x-layout>
+</x-admin.layout>

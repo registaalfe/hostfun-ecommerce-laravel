@@ -1,4 +1,4 @@
-<x-layout>
+<x-admin.layout>
     <div class="elementor-section flex flex-col p-8 min-h-screen bg-[#F7F9FB]">
         <div class="flex flex-row justify-between">
             <h1 class="text-2xl font-semibold text-[#161519]">Category</h1>
@@ -35,7 +35,7 @@
                                 <td
                                     class="flex flex-row justify-end px-6 py-4 whitespace-nowrap text-sm font-normal text-right">
                                     <a href="{{ route('admin.editCategory', $category->id) }}"
-                                        class="px-1.5 py-1 rounded-sm text-white bg-[#3AB8F1] flex items-center space-x-2 mr-2 hover:bg-[#1EA8E3]"><svg
+                                        class="px-1.5 py-1 rounded-sm text-white bg-[#0165FF] flex items-center space-x-2 mr-2 hover:bg-[#12294A]"><svg
                                             xmlns="http://www.w3.org/2000/svg" width="18" height="18"
                                             viewBox="0 0 24 24">
                                             <g fill="none">
@@ -67,4 +67,4 @@
             </div>
         </div>
     </div>
-</x-layout>
+</x-admin.layout>

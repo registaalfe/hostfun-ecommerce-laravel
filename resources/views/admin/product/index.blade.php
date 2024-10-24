@@ -1,4 +1,4 @@
-<x-layout>
+<x-admin.layout>
     <div class="elementor-section flex flex-col p-8 min-h-screen bg-[#F7F9FB]">
         <div class="flex flex-row justify-between">
             <h1 class="text-2xl font-semibold text-[#161519]">Product</h1>
@@ -15,54 +15,35 @@
             <div class="flex flex-row">
 
                 <!-- start:Pagination -->
-                <div class="relative inline-block text-left mx-4 my-4" x-data="{ isOpen: false }">
-                    <div>
-                        <button type="button" @click="toggleDropdown" @blur="isOpen = false"
-                            class="font-karla inline-flex w-32 justify-center gap-x-1.5 rounded-lg bg-white px-3 py-2 text-sm font-semibold border border-gray-200 text-[#161519] hover:bg-gray-50 focus:outline focus:outline-2 focus:outline-[#0165FF]"
-                            id="menu-button" aria-expanded="true" aria-haspopup="true">
-                            10 per page
-                            <svg class="-mr-1 h-5 w-5 text-gray-400" viewBox="0 0 20 20" fill="currentColor"
-                                aria-hidden="true" data-slot="icon">
-                                <path fill-rule="evenodd"
-                                    d="M5.22 8.22a.75.75 0 0 1 1.06 0L10 11.94l3.72-3.72a.75.75 0 1 1 1.06 1.06l-4.25 4.25a.75.75 0 0 1-1.06 0L5.22 9.28a.75.75 0 0 1 0-1.06Z"
-                                    clip-rule="evenodd" />
-                            </svg>
-                        </button>
-                    </div>
-
-                    <!-- Dropdown menu, show/hide based on menu state. -->
-                    <div x-show="isOpen" x-transition:enter="transition ease-out duration-100 transform"
-                        x-transition:enter-start="opacity-0 scale-95" x-transition:enter-end="opacity-100 scale-100"
-                        x-transition:leave="transition ease-in duration-75 transform"
-                        x-transition:leave-start="opacity-100 scale-100" x-transition:leave-end="opacity-0 scale-95"
-                        class="absolute z-10 mt-2 py-2 w-40 origin-top-left rounded-md bg-white shadow-lg ring-1 ring-black ring-opacity-5 focus:outline-none"
+                <div class="relative inline-block text-left mx-4 my-4">
+                    <div class="font-karla inline-flex w-32 justify-center gap-x-1.5 rounded-lg bg-white px-3 py-0.5 text-sm font-semibold border border-gray-200 text-[#161519] hover:bg-gray-50 focus:outline focus:outline-2 focus:outline-[#0165FF]"
                         role="menu" aria-orientation="vertical" aria-labelledby="menu-button" tabindex="-1">
-
-                        <div class="px-2 py-1" role="none" id="perPage">
-                            <!-- Active: "bg-gray-100 text-gray-900",
-                        Not Active: "text-gray-700" -->
-                            <a href="{{ request('perPage') == 10 ? 'selected' : '' }}"
-                                class="font-karla block px-4 py-2 text-sm text-[#161519] hover:bg-[#E0ECFF] rounded-md"
-                                role="menuitem" tabindex="-1" data-value="10">10 per page</a>
-                            <a href="#"
-                                class="font-karla block px-4 py-2 text-sm text-[#161519] hover:bg-[#E0ECFF] rounded-md">
-                                25 per page
-                            </a>
-                            <a href="#"
-                                class="font-karla block px-4 py-2 text-sm text-[#161519] hover:bg-[#E0ECFF] rounded-md"
-                                role="menuitem" tabindex="-1" id="menu-item-2">50 per page</a>
-                            <a href="#"
-                                class="font-karla block px-4 py-2 text-sm text-[#161519] hover:bg-[#E0ECFF] rounded-md"
-                                role="menuitem" tabindex="-1" id="menu-item-2">100 per page</a>
-                        </div>
+                        <form action="{{ route('admin.showProduct') }}" method="GET">
+                            <select name="perPage" id="perPage"
+                                class="flex justify-center w-[104px] mx-3 my-2 border-none bg-white focus:outline-none focus:ring-indigo-500 focus:border-indigo-500 sm:text-sm"
+                                onchange="this.form.submit()">
+                                <option value="10" {{ request('perPage') == 10 ? 'selected' : '' }}>10 per page
+                                </option>
+                                <option value="25" {{ request('perPage') == 25 ? 'selected' : '' }}>25 per page
+                                </option>
+                                <option value="50" {{ request('perPage') == 50 ? 'selected' : '' }}>50 per page
+                                </option>
+                                <option value="100" {{ request('perPage') == 100 ? 'selected' : '' }}>100 per page
+                                </option>
+                            </select>
+                        </form>
                     </div>
                 </div>
                 <!-- end:Pagination -->
+
 
                 <!-- start:Searching -->
                 <div class="my-4 max-w-screen-xl">
                     <div class="mx-auto sm:text-center">
                         <form>
+                            @if (request('category'))
+                                <input type="hidden" name="category" value="{{ request('category') }}">
+                            @endif
                             <div class="items-center mx-auto mb-3 space-y-4 max-w-screen-sm sm:flex sm:space-y-0">
                                 <div class="relative w-full">
                                     <label for="search"
@@ -82,7 +63,7 @@
                                 </div>
                                 <div>
                                     <button type="submit"
-                                        class="py-2 px-5 w-full text-sm font-medium text-center text-white rounded-lg border cursor-pointer bg-[#0165FF] border-primary-600 sm:rounded-none sm:rounded-r-lg hover:bg-primary-800 focus:ring-4 focus:ring-primary-300 dark:bg-primary-600 dark:hover:bg-primary-700 dark:focus:ring-primary-800">Search</button>
+                                        class="py-2 px-5 w-full text-sm font-medium text-center text-white rounded-lg border cursor-pointer bg-[#0165FF] border-primary-600 sm:rounded-none sm:rounded-r-lg hover:bg-[#12294A] hover:bg-primary-800 focus:ring-4 focus:ring-primary-300 dark:bg-primary-600 dark:hover:bg-primary-700 dark:focus:ring-primary-800">Search</button>
                                 </div>
                             </div>
                         </form>
@@ -136,7 +117,7 @@
                                     <td
                                         class="flex flex-row px-6 py-4 justify-end whitespace-nowrap text-sm font-normal text-right">
                                         <a href="{{ route('admin.editProduct', $product->id_product) }}"
-                                            class="px-1.5 py-1 rounded-sm text-white bg-[#3AB8F1] flex items-center space-x-2 mr-2 hover:bg-[#1EA8E3]"><svg
+                                            class="px-1.5 py-1 rounded-sm text-white bg-[#0165FF] flex items-center space-x-2 mr-2 hover:bg-[#12294A]"><svg
                                                 xmlns="http://www.w3.org/2000/svg" width="18" height="18"
                                                 viewBox="0 0 24 24">
                                                 <g fill="none">
@@ -172,4 +153,4 @@
 
 
     </div>
-</x-layout>
+</x-admin.layout>

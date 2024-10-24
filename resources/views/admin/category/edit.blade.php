@@ -1,4 +1,4 @@
-<x-layout>
+<x-admin.layout>
     <div class="elementor-section flex flex-col p-8">
         <form id="editCategoryForm" action="{{ route('admin.update', $categories->id) }}" method="POST">
             @csrf
@@ -13,4 +13,4 @@
                 type="submit" id="editButton">Submit</button>
         </form>
     </div>
-</x-layout>
+</x-admin.layout>

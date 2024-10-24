@@ -5,22 +5,22 @@ namespace App\Http\Controllers;
 use App\Models\CategoryProduct;
 use Illuminate\Http\Request;
 
-class adminController extends Controller
+class AdminController extends Controller
 {
     public function dashboard()
     {
-        return view('admin.index');
+        return view('admin.dashboard.index');
     }
 
     public function showCategory()
     {
         $categories = CategoryProduct::all();
-        return view('admin.category', compact('categories'));
+        return view('admin.category.index', compact('categories'));
     }
 
     public function createCategory()
     {
-        return view('admin.createCategory');
+        return view('admin.category.create');
     }
 
     public function store(Request $request)
@@ -37,7 +37,7 @@ class adminController extends Controller
 
     public function editCategory(CategoryProduct $categories)
     {
-        return view('admin.editCategory', compact('categories'));
+        return view('admin.category.edit', compact('categories'));
     }
 
     public function update(Request $request, CategoryProduct $categories)

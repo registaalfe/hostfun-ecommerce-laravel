@@ -22,79 +22,79 @@
 
                 <div class="elementor-column btn-login flex justify-center text-center">
                     <a href="#"
-                        class="signup-button text-base flex items-center text-center font-medium rounded-full mb-16 text-white bg-[#0165FF] hover:bg-[#12294A] duration-200 py-0 px-6 h-12 w-fit">Our
+                        class="signup-button text-base flex items-center text-center font-medium rounded-full mb-16 text-white bg-[#0165FF] hover:bg-[#12294A] duration-200 py-0 px-6 h-11 w-fit">Our
                         Pricing</a>
                 </div>
             </div>
 
             <!-- Start card slider feature -->
             <!-- <div class="container flex mx-auto flex-row min-w-full justify-evenly self-center">
-                            <div class="icon-group z-[222222] self-center">
-                                <button id="prev"
-                                    class="w-12 h-12 rounded-md rotate-45 border border-[#684A90] transition hover:bg-[#6B60DB]"><i
-                                        class="icon-left fa-solid fa-angle-up"></i></button>
-                            </div>
-                            <div id="slide" class="slide mt-14">
-                                <div class="item bg-[#121733] border-2 border-[#793E6F] w-[310px] h-[384px] inline-block relative">
-                                    <div class="content">
-                                        <div class="heading-slider flex border-b-[1px] mx-6 my-4 self-center">
-                                            <h3 class="text-white font-semibold text-left text-2xl w-32 pb-4">Domain Solutions
-                                            </h3>
-                                            <button id="next-up"
-                                                class="w-12 h-12 rounded-[50%] bg-white transition hover:bg-gray-300 ml-20 mt-1"><i
-                                                    class="fa-lg fa-solid fa-arrow-right fa-rotate-by"
-                                                    style="--fa-rotate-angle: -45deg;"></i></button>
-                                        </div>
+                                                                                                                                                            <div class="icon-group z-[222222] self-center">
+                                                                                                                                                                <button id="prev"
+                                                                                                                                                                    class="w-12 h-12 rounded-md rotate-45 border border-[#684A90] transition hover:bg-[#6B60DB]"><i
+                                                                                                                                                                        class="icon-left fa-solid fa-angle-up"></i></button>
+                                                                                                                                                            </div>
+                                                                                                                                                            <div id="slide" class="slide mt-14">
+                                                                                                                                                                <div class="item bg-[#121733] border-2 border-[#793E6F] w-[310px] h-[384px] inline-block relative">
+                                                                                                                                                                    <div class="content">
+                                                                                                                                                                        <div class="heading-slider flex border-b-[1px] mx-6 my-4 self-center">
+                                                                                                                                                                            <h3 class="text-white font-semibold text-left text-2xl w-32 pb-4">Domain Solutions
+                                                                                                                                                                            </h3>
+                                                                                                                                                                            <button id="next-up"
+                                                                                                                                                                                class="w-12 h-12 rounded-[50%] bg-white transition hover:bg-gray-300 ml-20 mt-1"><i
+                                                                                                                                                                                    class="fa-lg fa-solid fa-arrow-right fa-rotate-by"
+                                                                                                                                                                                    style="--fa-rotate-angle: -45deg;"></i></button>
+                                                                                                                                                                        </div>
 
-                                        <p class="text-left text-gray-300 mx-6 my-4">Find the perfect domain to match your unique vision
-                                            and goals effortlessly.</p>
-                                        <img class="rounded-2xl w-[280px] h-[168px] mx-[15px]" src="/img/img-slider1.png"
-                                            alt="Domain Solutions">
-                                    </div>
-                                </div>
+                                                                                                                                                                        <p class="text-left text-gray-300 mx-6 my-4">Find the perfect domain to match your unique vision
+                                                                                                                                                                            and goals effortlessly.</p>
+                                                                                                                                                                        <img class="rounded-2xl w-[280px] h-[168px] mx-[15px]" src="/img/img-slider1.png"
+                                                                                                                                                                            alt="Domain Solutions">
+                                                                                                                                                                    </div>
+                                                                                                                                                                </div>
 
-                                <div class="item bg-[#121733] border-2 border-[#793E6F] w-[310px] h-[384px] inline-block relative">
-                                    <div class="content">
-                                        <div class="heading-slider flex border-b-[1px] mx-6 my-4 self-center">
-                                            <h3 class="text-white font-semibold text-left text-2xl w-32 pb-4">Hosting Packages
-                                            </h3>
-                                            <button id="next-up"
-                                                class="w-12 h-12 rounded-[50%] bg-white transition hover:bg-gray-300 ml-20 mt-1"><i
-                                                    class="fa-lg fa-solid fa-arrow-right fa-rotate-by"
-                                                    style="--fa-rotate-angle: -45deg;"></i></button>
-                                        </div>
+                                                                                                                                                                <div class="item bg-[#121733] border-2 border-[#793E6F] w-[310px] h-[384px] inline-block relative">
+                                                                                                                                                                    <div class="content">
+                                                                                                                                                                        <div class="heading-slider flex border-b-[1px] mx-6 my-4 self-center">
+                                                                                                                                                                            <h3 class="text-white font-semibold text-left text-2xl w-32 pb-4">Hosting Packages
+                                                                                                                                                                            </h3>
+                                                                                                                                                                            <button id="next-up"
+                                                                                                                                                                                class="w-12 h-12 rounded-[50%] bg-white transition hover:bg-gray-300 ml-20 mt-1"><i
+                                                                                                                                                                                    class="fa-lg fa-solid fa-arrow-right fa-rotate-by"
+                                                                                                                                                                                    style="--fa-rotate-angle: -45deg;"></i></button>
+                                                                                                                                                                        </div>
 
-                                        <p class="text-left text-gray-300 mx-6 my-4">Ready to launch your website? Get hosting from us
-                                            and get online with easily!</p>
-                                        <img class="rounded-2xl w-[280px] h-[168px] mx-[15px]" src="/img/img-slider2.png"
-                                            alt="Domain Solutions">
-                                    </div>
-                                </div>
+                                                                                                                                                                        <p class="text-left text-gray-300 mx-6 my-4">Ready to launch your website? Get hosting from us
+                                                                                                                                                                            and get online with easily!</p>
+                                                                                                                                                                        <img class="rounded-2xl w-[280px] h-[168px] mx-[15px]" src="/img/img-slider2.png"
+                                                                                                                                                                            alt="Domain Solutions">
+                                                                                                                                                                    </div>
+                                                                                                                                                                </div>
 
-                                <div class="item bg-[#121733] border-2 border-[#793E6F] w-[310px] h-[384px] inline-block relative">
-                                    <div class="content">
-                                        <div class="heading-slider flex border-b-[1px] mx-6 my-4 self-center">
-                                            <h3 class="text-white font-semibold text-left text-2xl w-32 pb-4">VPS Purchase
-                                            </h3>
-                                            <button id="next-up"
-                                                class="w-12 h-12 rounded-[50%] bg-white transition hover:bg-gray-300 ml-20 mt-1"><i
-                                                    class="fa-lg fa-solid fa-arrow-right fa-rotate-by"
-                                                    style="--fa-rotate-angle: -45deg;"></i></button>
-                                        </div>
+                                                                                                                                                                <div class="item bg-[#121733] border-2 border-[#793E6F] w-[310px] h-[384px] inline-block relative">
+                                                                                                                                                                    <div class="content">
+                                                                                                                                                                        <div class="heading-slider flex border-b-[1px] mx-6 my-4 self-center">
+                                                                                                                                                                            <h3 class="text-white font-semibold text-left text-2xl w-32 pb-4">VPS Purchase
+                                                                                                                                                                            </h3>
+                                                                                                                                                                            <button id="next-up"
+                                                                                                                                                                                class="w-12 h-12 rounded-[50%] bg-white transition hover:bg-gray-300 ml-20 mt-1"><i
+                                                                                                                                                                                    class="fa-lg fa-solid fa-arrow-right fa-rotate-by"
+                                                                                                                                                                                    style="--fa-rotate-angle: -45deg;"></i></button>
+                                                                                                                                                                        </div>
 
-                                        <p class="text-left text-gray-300 mx-6 my-4">Upgrade to VPS hosting for better speed, security,
-                                            and reliability with our product.</p>
-                                        <img class="rounded-2xl w-[280px] h-[168px] mx-[15px]" src="/img/img-slider3.png"
-                                            alt="Domain Solutions">
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="icon-group z-[222222] self-center">
-                                <button style="left: 20%" id="next"
-                                    class="w-12 h-12 rounded-md rotate-45 border border-[#684A90] transition hover:bg-[#6B60DB]"><i
-                                        class="icon-next fa-solid fa-angle-right"></i></button>
-                            </div>
-                        </div> -->
+                                                                                                                                                                        <p class="text-left text-gray-300 mx-6 my-4">Upgrade to VPS hosting for better speed, security,
+                                                                                                                                                                            and reliability with our product.</p>
+                                                                                                                                                                        <img class="rounded-2xl w-[280px] h-[168px] mx-[15px]" src="/img/img-slider3.png"
+                                                                                                                                                                            alt="Domain Solutions">
+                                                                                                                                                                    </div>
+                                                                                                                                                                </div>
+                                                                                                                                                            </div>
+                                                                                                                                                            <div class="icon-group z-[222222] self-center">
+                                                                                                                                                                <button style="left: 20%" id="next"
+                                                                                                                                                                    class="w-12 h-12 rounded-md rotate-45 border border-[#684A90] transition hover:bg-[#6B60DB]"><i
+                                                                                                                                                                        class="icon-next fa-solid fa-angle-right"></i></button>
+                                                                                                                                                            </div>
+                                                                                                                                                        </div> -->
             <!-- End card slider feature -->
         </div>
         <!-- End of Hero Section -->
@@ -160,7 +160,7 @@
                 </div>
                 <div class="elementor-element btn-contact mt-5 xs:mt-8 sm:mt-8">
                     <a href="#"
-                        class="signup-button flex text-base text-center font-bold rounded-full mb-16 text-[#12294A] bg-[#F5F5F5] h-[48px] py-0 px-6 w-fit justify-center items-center xs:w-full xs:mb-8 sm:w-full sm:mb-8">Contact
+                        class="signup-button flex text-base text-center font-bold rounded-full mb-16 text-[#12294A] bg-[#F5F5F5] h-[48px] py-0 px-6 w-fit justify-center items-center xs:w-full xs:mb-8 sm:w-full sm:mb-8 hover:bg-[#0165FF] hover:text-white duration-300">Contact
                         Us</a>
                 </div>
             </div>
@@ -176,7 +176,7 @@
                         class="element-widget-container accordion-collapse h-0 overflow-hidden transition ease-in-out peer-checked:h-full">
                         <div class="accordion-body px-5 py-1 xs:p-0 xs:my-2 sm:p-0 sm:my-2
                     ">
-                            <p class="text-base text-[#FFFFFF82] xs:text-sm sm:text-sm">Advertise your brand to large
+                            <p class="text-base text-[#7A7A7A] xs:text-sm sm:text-sm">Advertise your brand to large
                                 audience through our talents social media.</p>
                         </div>
                     </div>
@@ -191,7 +191,7 @@
                         class="element-widget-container accordion-collapse h-0 overflow-hidden transition ease-in-out peer-checked:h-full">
                         <div class="accordion-body px-5 py-1 xs:p-0 xs:my-2 sm:p-0 sm:my-2
                     ">
-                            <p class="text-base text-[#FFFFFF82] xs:text-sm sm:text-sm">Helped clients with complex
+                            <p class="text-base text-[#7A7A7A] xs:text-sm sm:text-sm">Helped clients with complex
                                 technical issues, fixing problems quickly to keep their systems running smoothly.</p>
                         </div>
                     </div>
@@ -206,7 +206,7 @@
                         class="element-widget-container accordion-collapse h-0 overflow-hidden transition ease-in-out peer-checked:h-full">
                         <div class="accordion-body px-5 py-1 xs:p-0 xs:my-2 sm:p-0 sm:my-2
                     ">
-                            <p class="text-base text-[#FFFFFF82] xs:text-sm sm:text-sm">Participated in the design and
+                            <p class="text-base text-[#7A7A7A] xs:text-sm sm:text-sm">Participated in the design and
                                 maintenance of automated test frameworks, enhancing the efficiency and reliability of
                                 automated QA processes.</p>
                         </div>
@@ -239,7 +239,7 @@
                     </div>
                     <div class="elementor-column flex btn-login xs:order-3 sm:order-3 md:order-3">
                         <a href="#"
-                            class="signup-button flex text-base font-medium rounded-full mb-16 text-[#0f39a6] bg-[#EAEDF7] h-[48px] py-0 px-6 w-fit justify-center items-center xs:mb-0 xs:text-sm sm:text-sm sm:mb-0 md:mb-0">Our
+                            class="signup-button flex text-base font-medium rounded-full mb-16 text-white bg-[#0165FF] hover:bg-[#12294A] duration-300 h-[48px] py-0 px-6 w-fit justify-center items-center xs:mb-0 xs:text-sm sm:text-sm sm:mb-0 md:mb-0">Our
                             Pricing</a>
                     </div>
                     <div class="elementor-element flex flex-col xs:order-2 sm:order-2 md:order-2 lg:hidden xl:hidden">
@@ -265,7 +265,7 @@
                     </div>
                     <div class="elementor-column flex btn-login xs:order-3 sm:order-3 md:order-3">
                         <a href="#"
-                            class="signup-button flex text-base font-medium rounded-full mb-16 text-[#0f39a6] bg-[#EAEDF7] h-[48px] py-0 px-6 w-fit justify-center items-center xs:mb-0 xs:text-sm sm:text-sm sm:mb-0 md:mb-0">Our
+                            class="signup-button flex text-base font-medium rounded-full mb-16 text-white bg-[#0165FF] hover:bg-[#12294A] duration-300 h-[48px] py-0 px-6 w-fit justify-center items-center xs:mb-0 xs:text-sm sm:text-sm sm:mb-0 md:mb-0">Our
                             Pricing</a>
                     </div>
                     <div class="elementor-element flex flex-col xs:order-2 sm:order-2 md:order-2 lg:hidden xl:hidden">
@@ -294,7 +294,7 @@
                 </div>
                 <div class="elementor-element btn-login mt-4">
                     <a href="#"
-                        class="signup-button flex text-base font-semibold rounded-full text-[#12294A] bg-[#F5F5F5] h-[48px] py-0 px-6 w-fit justify-center items-center xs:text-sm xs:h-[42px] sm:text-sm sm:h-[42px]">Our
+                        class="signup-button flex text-base font-semibold rounded-full text-[#12294A] bg-[#F5F5F5] hover:text-white hover:bg-[#0165FF] duration-300 h-[48px] py-0 px-6 w-fit justify-center items-center xs:text-sm xs:h-[42px] sm:text-sm sm:h-[42px]">Our
                         Pricing</a>
                 </div>
             </div>
@@ -327,23 +327,23 @@
                     <div
                         class="footer-socmed flex gap-2 pt-8 justify-center overflow-hidden xs:hidden sm:hidden md:hidden">
                         <a href="#"
-                            class="flex border-2 w-12 h-12 border-[#ededef] rounded-full justify-center transition">
+                            class="flex border-2 w-12 h-12 border-[#ededef] rounded-full justify-center transition hover:bg-[#12294A] hover:text-white">
                             <i class="socmed-icon fa-brands fa-dribbble fa-lg"></i>
                         </a>
                         <a href="#"
-                            class="flex border-2 w-12 h-12 border-[#ededef] rounded-full justify-center transition">
+                            class="flex border-2 w-12 h-12 border-[#ededef] rounded-full justify-center transition hover:bg-[#12294A] hover:text-white">
                             <i class="socmed-icon fa-brands fa-instagram fa-lg"></i>
                         </a>
                         <a href="#"
-                            class="flex border-2 w-12 h-12 border-[#ededef] rounded-full justify-center transition">
+                            class="flex border-2 w-12 h-12 border-[#ededef] rounded-full justify-center transition hover:bg-[#12294A] hover:text-white">
                             <i class="socmed-icon fa-brands fa-facebook-f fa-lg"></i>
                         </a>
                         <a href="#"
-                            class="flex border-2 w-12 h-12 border-[#ededef] rounded-full justify-center transition">
+                            class="flex border-2 w-12 h-12 border-[#ededef] rounded-full justify-center transition hover:bg-[#12294A] hover:text-white">
                             <i class="socmed-icon fa-brands fa-twitter fa-lg"></i>
                         </a>
                         <a href="#"
-                            class="flex border-2 w-12 h-12 border-[#ededef] rounded-full justify-center transition">
+                            class="flex border-2 w-12 h-12 border-[#ededef] rounded-full justify-center transition hover:bg-[#12294A] hover:text-white">
                             <i class="socmed-icon fa-brands fa-linkedin-in fa-lg"></i>
                         </a>
                     </div>
@@ -353,19 +353,19 @@
                         class="menu-container xs:self-center xs:text-center xs:w-full sm:self-center sm:w-full sm:text-center md:self-center md:w-full md:text-center">
                         <ul class="menu-secondary flex flex-col gap-4">
                             <li class="px-2 pb-1">
-                                <a class="richtext leading-7 text-base text-[#020b1f] xs:text-sm sm:text-sm"
+                                <a class="richtext leading-7 text-base text-[#020b1f] hover:text-[#525252] xs:text-sm sm:text-sm"
                                     href="#">Home</a>
                             </li>
                             <li class="px-2 pb-1">
-                                <a class="richtext leading-7 text-base text-[#020b1f] xs:text-sm sm:text-sm"
+                                <a class="richtext leading-7 text-base text-[#020b1f] hover:text-[#525252] xs:text-sm sm:text-sm"
                                     href="#">Hosting</a>
                             </li>
                             <li class="px-2 pb-1">
-                                <a class="richtext leading-7 text-base text-[#020b1f] xs:text-sm sm:text-sm"
+                                <a class="richtext leading-7 text-base text-[#020b1f] hover:text-[#525252] xs:text-sm sm:text-sm"
                                     href="#">Domain</a>
                             </li>
                             <li class="px-2 pb-1">
-                                <a class="richtext leading-7 text-base text-[#020b1f] xs:text-sm sm:text-sm"
+                                <a class="richtext leading-7 text-base text-[#020b1f] hover:text-[#525252] xs:text-sm sm:text-sm"
                                     href="#">Contact</a>
                             </li>
                         </ul>
