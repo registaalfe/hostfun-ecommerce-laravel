@@ -85,9 +85,9 @@
         </nav>
 
         <div class="flex items-center xs:hidden sm:hidden md:hidden">
-            <button type="button"
-                class="signup-button flex items-center text-base rounded-full duration-300 font-medium text-white bg-[#0165FF] hover:bg-[#12294A] h-9 py-0 px-6 focus:outline-none max-md:hidden">Signup
-            </button>
+            <a href="{{ route('login') }}"
+                class="signup-button flex items-center text-base rounded-full duration-300 font-medium text-white bg-[#0165FF] hover:bg-[#12294A] h-9 py-0 px-6 focus:outline-none max-md:hidden">Sign
+                in</a>
         </div>
     </header>
 

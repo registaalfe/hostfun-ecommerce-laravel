@@ -4,22 +4,21 @@ use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\UserController;
 use App\Http\Controllers\AdminController;
 use App\Http\Controllers\LoginController;
-use App\Http\Controllers\productController;
+use App\Http\Controllers\ProductController;
 use App\Http\Controllers\RegisterController;
 
 Route::prefix('/')->group(function () {
-    Route::get('/index', [UserController::class, 'index'])->name('index');
+    Route::get('/', [UserController::class, 'index'])->name('index');
 
     // Register User
     Route::get('/register', [RegisterController::class, 'index'])->name('register');
     Route::post('/store', [RegisterController::class, 'store'])->name('store');
 
     // Login User
-    Route::get('/login', [LoginController::class, 'index'])->name('login');
+    Route::get('/login', [LoginController::class, 'index'])->name('login')->middleware('guest');
+    Route::post('/auth', [LoginController::class, 'authenticate'])->name('auth');
+    Route::post('/logout', [LoginController::class, 'destroy'])->name('logout');
 });
-
-
-
 
 Route::prefix('admin')->group(function () {
     Route::get('/dashboard', [AdminController::class, 'dashboard'])->name('admin.dashboard');
