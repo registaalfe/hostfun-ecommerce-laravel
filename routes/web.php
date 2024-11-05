@@ -5,19 +5,18 @@ use App\Http\Controllers\UserController;
 use App\Http\Controllers\AdminController;
 use App\Http\Controllers\LoginController;
 use App\Http\Controllers\ProductController;
-use App\Http\Controllers\RegisterController;
 
 Route::prefix('/')->group(function () {
     Route::get('/', [UserController::class, 'index'])->name('index');
 
     // Register User
-    Route::get('/register', [RegisterController::class, 'index'])->name('register');
-    Route::post('/store', [RegisterController::class, 'store'])->name('store');
+    Route::get('/register', [LoginController::class, 'registerForm'])->name('register');
+    Route::post('/store', [LoginController::class, 'store'])->name('store');
 
     // Login User
-    Route::get('/login', [LoginController::class, 'index'])->name('login')->middleware('guest');
+    Route::get('/login', [LoginController::class, 'loginForm'])->name('login')->middleware('guest');
     Route::post('/auth', [LoginController::class, 'authenticate'])->name('auth');
-    Route::post('/logout', [LoginController::class, 'destroy'])->name('logout');
+    Route::post('/logout', [UserController::class, 'logout'])->name('logout');
 });
 
 Route::prefix('admin')->group(function () {

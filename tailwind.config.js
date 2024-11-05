@@ -35,6 +35,7 @@ export default {
         fontFamily: {
             volkorn: ["Vollkorn", "serif"],
             karla: ["Karla", "serif"],
+            sans: ["Figtree", ...defaultTheme.fontFamily.sans],
         },
     },
     corePlugins: {
