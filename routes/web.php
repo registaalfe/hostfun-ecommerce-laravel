@@ -10,7 +10,7 @@ Route::prefix('/')->group(function () {
     Route::get('/', [UserController::class, 'index'])->name('index');
 
     // Register User
-    Route::get('/register', [LoginController::class, 'registerForm'])->name('register');
+    Route::get('/register', [LoginController::class, 'registerForm'])->name('register')->middleware('guest');
     Route::post('/store', [LoginController::class, 'store'])->name('store');
 
     // Login User
@@ -19,7 +19,7 @@ Route::prefix('/')->group(function () {
     Route::post('/logout', [UserController::class, 'logout'])->name('logout');
 });
 
-Route::prefix('admin')->group(function () {
+Route::prefix('admin')->middleware('IsAdmin')->group(function () {
     Route::get('/dashboard', [AdminController::class, 'dashboard'])->name('admin.dashboard');
     Route::get('/category', [AdminController::class, 'showCategory'])->name('admin.showCategory');
     Route::get('/createCategory', [AdminController::class, 'createCategory'])->name('admin.createCategory');

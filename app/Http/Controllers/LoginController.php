@@ -49,7 +49,12 @@ class LoginController extends Controller
         if (Auth::attempt($credentials)) {
             $request->session()->regenerate(); //regenerate untuk menghindari session fixation
 
-            return redirect()->intended(route('index'));
+            // Cek peran (roles) pengguna yang berhasil login
+            if (Auth::user()->roles === 'admin') {
+                return redirect()->route('admin.dashboard');
+            } else {
+                return redirect()->route('index');
+            }
         }
 
         return back()->withErrors([

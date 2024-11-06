@@ -53,15 +53,18 @@
 
         </nav>
         <div class="px-2 py-4 border-t">
-            <a href="#"
-                class="flex items-center px-6 py-2 text-sm font-medium text-white rounded-lg hover:bg-[#12294A]">
-                <span class="nav-link-icon">
-                    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24">
-                        <path fill="currentColor"
-                            d="m17 7l-1.41 1.41L18.17 11H8v2h10.17l-2.58 2.58L17 17l5-5zM4 5h8V3H4c-1.1 0-2 .9-2 2v14c0 1.1.9 2 2 2h8v-2H4z" />
-                    </svg>
-                </span>
-                <span class="nav-link-text font-karla pl-2">Logout</span>
-            </a>
+            <form method="POST" action="{{ route('logout') }}">
+                @csrf
+                <button type="submit"
+                    class="flex items-center w-full px-6 py-2 text-sm font-medium text-white rounded-lg hover:bg-[#12294A]">
+                    <span class="nav-link-icon">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24">
+                            <path fill="currentColor"
+                                d="m17 7l-1.41 1.41L18.17 11H8v2h10.17l-2.58 2.58L17 17l5-5zM4 5h8V3H4c-1.1 0-2 .9-2 2v14c0 1.1.9 2 2 2h8v-2H4z" />
+                        </svg>
+                    </span>
+                    <span class="nav-link-text font-karla pl-2">Logout</span>
+                </button>
+            </form>
         </div>
     </div>
