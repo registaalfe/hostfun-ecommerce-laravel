@@ -17,6 +17,7 @@ class Product extends Model
         'name_product',
         'category_id',
         'price_product',
+        'image_path',
         'created_at',
         'updated_at', // Add 'stock' or any new column
     ];

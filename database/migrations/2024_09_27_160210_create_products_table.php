@@ -14,13 +14,13 @@ return new class extends Migration
         Schema::create('products', function (Blueprint $table) {
             $table->id('id_product');
             $table->string('name_product');
-            $table->unsignedBigInteger('category_id');
             // Foreign key constraint
             $table->foreignId('category_id')->constrained(
                 table: 'category_products',
                 indexName: 'category_id'
             );
             $table->integer('price_product');
+            $table->string('image_path');
             $table->timestamps();
         });
     }

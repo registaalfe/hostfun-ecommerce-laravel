@@ -1,7 +1,7 @@
 <x-admin.layout>
     <div class="elementor-section flex flex-col px-8 py-2">
         <h1 class="text-2xl font-semibold text-[#161519]">Create Product</h1>
-        <form action="{{ route('admin.storeProduct') }}" method="POST">
+        <form action="{{ route('admin.storeProduct') }}" method="POST" enctype="multipart/form-data">
             @csrf
             <div class="flex flex-col mt-6">
                 <label class="font-karla py-2 text-gray-600">Name</label>
@@ -30,6 +30,20 @@
                     <span class="text-red-500 text-sm">{{ $message }}</span>
                 @enderror
             </div>
+
+            <div class="flex flex-col mt-4">
+                <label class="font-karla py-2 text-gray-600" for="image_path">Upload
+                    file</label>
+                <input
+                    class="block w-1/2 text-sm text-gray-900 border border-gray-300 rounded-lg cursor-pointer bg-gray-50 dark:text-gray-400 focus:outline-none dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400"
+                    name="image_path" id="image_path" type="file">
+
+                <!-- Server-side validation error message -->
+                @error('image_path')
+                    <span class="text-red-500 text-sm">{{ $message }}</span>
+                @enderror
+            </div>
+
 
             <div class="flex flex-col mt-4">
                 <label class="font-karla py-2 text-gray-600">Price</label>

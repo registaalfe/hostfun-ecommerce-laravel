@@ -48,6 +48,8 @@
     <script src="{{ asset('js/editAlert.js') }}"></script>
     <script src="{{ asset('js/deleteAlert.js') }}"></script>
     <script src="{{ asset('js/toggleDropdown.js') }}"></script>
+    <script src="{{ asset('js/search.js') }}"></script>
+    <script src="../path/to/flowbite/dist/flowbite.min.js"></script>
 
 </body>
 

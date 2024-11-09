@@ -5,6 +5,7 @@ namespace App\Http\Controllers;
 use Illuminate\Http\Request;
 use App\Models\CategoryProduct;
 use App\Models\Product;
+use Illuminate\Support\Facades\File;
 
 
 class ProductController extends Controller
@@ -28,18 +29,18 @@ class ProductController extends Controller
     public function storeProduct(Request $request)
     {
         // Validate input data
-        $request->validate([
+        $validatedData = $request->validate([
             'name_product' => 'required|string|max:255',
             'category_id' => 'required',
+            'image_path' => 'required|image',
             'price_product' => 'required|numeric',
         ]);
 
+        //Jika validasi berhasil maka ambil image_path jika ada request an tipe file maka simpan di storage laravel dengan nama yg telah ditentukan
+        $validatedData['image_path'] = $request->file('image_path')->store('image_paths');
+
         // Create a new product
-        Product::create([
-            'name_product' => $request->name_product,
-            'category_id' => $request->category_id,
-            'price_product' => $request->price_product,
-        ]);
+        Product::create($validatedData);
 
         // Redirect or return success message
         return redirect()->route('admin.showProduct')->with('success', 'Product created successfully.');
@@ -59,21 +60,24 @@ class ProductController extends Controller
     public function updateProduct(Request $request, $id)
     {
         // Validasi input
-        $request->validate([
+        $validatedData = $request->validate([
             'name_product' => 'required|string|max:255',
             'category_id' => 'required',
+            'image_path' => 'sometimes|image',
             'price_product' => 'required|numeric',
         ]);
 
         // Menemukan produk berdasarkan ID
         $product = Product::findOrFail($id);
 
+        if ($request->hasFile('image_path')) {
+            File::delete(storage_path('app/public/' . $product->image_path));
+            $validatedData['image_path'] = $request->file('image_path')->store('image_paths');
+        }
+
+
         // Update produk
-        $product->update([
-            'name_product' => $request->name_product,
-            'category_id' => $request->category_id,
-            'price_product' => $request->price_product,
-        ]);
+        $product->update($validatedData);
 
         return redirect()->route('admin.showProduct')->with('success', 'Product updated successfully.');
     }
@@ -84,6 +88,7 @@ class ProductController extends Controller
         $product = Product::findOrFail($id);
 
         // Hapus produk
+        File::delete(storage_path('app/public/' . $product->image_path));
         $product->delete();
 
         // Redirect atau kirim pesan sukses
