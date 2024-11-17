@@ -9,7 +9,7 @@
         </div>
 
         <nav class="flex-1 px-2 py-4 space-y-1 bg-[#0165FF]">
-            <a href="/admin/dashboard"
+            <a href="{{ route('admin.dashboard') }}"
                 class="flex items-center px-6 py-2 text-sm font-medium text-white rounded-lg hover:bg-[#12294A]">
                 <span class="nav-link-icon">
                     <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24">
@@ -20,7 +20,7 @@
                 </span>
                 <span class="nav-link-text font-karla pl-2">Dashboard</span>
             </a>
-            <a href="/admin/category"
+            <a href="{{ route('admin.showCategory') }}"
                 class="flex items-center px-6 py-2 text-sm font-medium text-white rounded-lg hover:bg-[#12294A]">
                 <span class="nav-link-icon">
                     <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24">
@@ -30,7 +30,7 @@
                 </span>
                 <span class="nav-link-text font-karla pl-2">Category</span>
             </a>
-            <a href="/admin/product"
+            <a href="{{ route('admin.showProduct') }}"
                 class="flex items-center px-6 py-2 text-sm font-medium text-white rounded-lg hover:bg-[#12294A]">
                 <span class="nav-link-icon">
                     <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24">
@@ -40,7 +40,7 @@
                 </span>
                 <span class="nav-link-text font-karla pl-2">Product</span>
             </a>
-            <a href="#"
+            <a href="{{ route('admin.showTransactions') }}"
                 class="flex items-center px-6 py-2 text-sm font-medium text-white rounded-lg hover:bg-[#12294A]">
                 <span class="nav-link-icon">
                     <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 1024 1024">

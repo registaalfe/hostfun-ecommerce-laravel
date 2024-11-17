@@ -17,8 +17,11 @@
         href="https://fonts.googleapis.com/css2?family=Karla:wght@200;300;400;500;600;700;800&family=Vollkorn:wght@400;500;600;700;800&display=swap"
         rel="stylesheet" />
     <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="//cdn.datatables.net/2.1.8/css/dataTables.dataTables.min.css">
+    <script src="https://cdn.datatables.net/2.1.8/js/dataTables.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
     <script defer src="https://cdn.jsdelivr.net/npm/alpinejs@3.x.x/dist/cdn.min.js"></script>
+
 
 
 </head>
@@ -42,6 +45,8 @@
     <!-- end: Main -->
 
     <!-- JS Libraries -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+    <script src="//cdn.datatables.net/2.1.8/js/dataTables.min.js"></script>
     <script src="https://kit.fontawesome.com/8bcf7cf26c.js" crossorigin="anonymous"></script>
     <script script src="{{ asset('js/admin.js') }}"></script>
     <script src="{{ asset('js/createAlert.js') }}"></script>
@@ -50,6 +55,14 @@
     <script src="{{ asset('js/toggleDropdown.js') }}"></script>
     <script src="{{ asset('js/search.js') }}"></script>
     <script src="../path/to/flowbite/dist/flowbite.min.js"></script>
+
+    <script src="https://cdn.datatables.net/2.1.8/js/dataTables.tailwindcss.js"></script>
+    <script>
+        let table = new DataTable('table.display');
+    </script>
+
+    @include('sweetalert::alert')
+
 
 </body>
 

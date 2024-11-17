@@ -6,18 +6,18 @@ use Illuminate\Http\Request;
 use App\Models\CategoryProduct;
 use App\Models\Product;
 use Illuminate\Support\Facades\File;
+use RealRashid\SweetAlert\Facades\Alert;
+
 
 
 class ProductController extends Controller
 {
     public function showProduct(Request $request)
     {
-        // Mengambil jumlah data per halaman dari query string
-        $perPage = $request->input('perPage', 10); // Default 10 jika tidak ada parameter
 
         // Mengambil semua produk dengan pagination
-        $products = Product::with('category')->filter(request(['search']))->latest()->paginate($perPage); //Pagination untuk untuk menghindari mengambil terlalu banyak data sekaligus 
-        return view('admin.product.index', compact('products', 'perPage'));
+        $products = Product::with('category')->latest()->get(); //Pagination untuk untuk menghindari mengambil terlalu banyak data sekaligus 
+        return view('admin.product.index', compact('products'));
     }
 
     public function createProduct()
@@ -41,6 +41,11 @@ class ProductController extends Controller
 
         // Create a new product
         Product::create($validatedData);
+
+        Alert::success(
+            'Success Title',
+            'Success Message'
+        );
 
         // Redirect or return success message
         return redirect()->route('admin.showProduct')->with('success', 'Product created successfully.');

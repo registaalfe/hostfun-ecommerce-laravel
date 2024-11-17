@@ -29,72 +29,72 @@
 
             <!-- Start card slider feature -->
             <!-- <div class="container flex mx-auto flex-row min-w-full justify-evenly self-center">
-                                                                                                                                                            <div class="icon-group z-[222222] self-center">
-                                                                                                                                                                <button id="prev"
-                                                                                                                                                                    class="w-12 h-12 rounded-md rotate-45 border border-[#684A90] transition hover:bg-[#6B60DB]"><i
-                                                                                                                                                                        class="icon-left fa-solid fa-angle-up"></i></button>
-                                                                                                                                                            </div>
-                                                                                                                                                            <div id="slide" class="slide mt-14">
-                                                                                                                                                                <div class="item bg-[#121733] border-2 border-[#793E6F] w-[310px] h-[384px] inline-block relative">
-                                                                                                                                                                    <div class="content">
-                                                                                                                                                                        <div class="heading-slider flex border-b-[1px] mx-6 my-4 self-center">
-                                                                                                                                                                            <h3 class="text-white font-semibold text-left text-2xl w-32 pb-4">Domain Solutions
-                                                                                                                                                                            </h3>
-                                                                                                                                                                            <button id="next-up"
-                                                                                                                                                                                class="w-12 h-12 rounded-[50%] bg-white transition hover:bg-gray-300 ml-20 mt-1"><i
-                                                                                                                                                                                    class="fa-lg fa-solid fa-arrow-right fa-rotate-by"
-                                                                                                                                                                                    style="--fa-rotate-angle: -45deg;"></i></button>
-                                                                                                                                                                        </div>
+                                                                                                                                                                                                        <div class="icon-group z-[222222] self-center">
+                                                                                                                                                                                                            <button id="prev"
+                                                                                                                                                                                                                class="w-12 h-12 rounded-md rotate-45 border border-[#684A90] transition hover:bg-[#6B60DB]"><i
+                                                                                                                                                                                                                    class="icon-left fa-solid fa-angle-up"></i></button>
+                                                                                                                                                                                                        </div>
+                                                                                                                                                                                                        <div id="slide" class="slide mt-14">
+                                                                                                                                                                                                            <div class="item bg-[#121733] border-2 border-[#793E6F] w-[310px] h-[384px] inline-block relative">
+                                                                                                                                                                                                                <div class="content">
+                                                                                                                                                                                                                    <div class="heading-slider flex border-b-[1px] mx-6 my-4 self-center">
+                                                                                                                                                                                                                        <h3 class="text-white font-semibold text-left text-2xl w-32 pb-4">Domain Solutions
+                                                                                                                                                                                                                        </h3>
+                                                                                                                                                                                                                        <button id="next-up"
+                                                                                                                                                                                                                            class="w-12 h-12 rounded-[50%] bg-white transition hover:bg-gray-300 ml-20 mt-1"><i
+                                                                                                                                                                                                                                class="fa-lg fa-solid fa-arrow-right fa-rotate-by"
+                                                                                                                                                                                                                                style="--fa-rotate-angle: -45deg;"></i></button>
+                                                                                                                                                                                                                    </div>
 
-                                                                                                                                                                        <p class="text-left text-gray-300 mx-6 my-4">Find the perfect domain to match your unique vision
-                                                                                                                                                                            and goals effortlessly.</p>
-                                                                                                                                                                        <img class="rounded-2xl w-[280px] h-[168px] mx-[15px]" src="/img/img-slider1.png"
-                                                                                                                                                                            alt="Domain Solutions">
-                                                                                                                                                                    </div>
-                                                                                                                                                                </div>
+                                                                                                                                                                                                                    <p class="text-left text-gray-300 mx-6 my-4">Find the perfect domain to match your unique vision
+                                                                                                                                                                                                                        and goals effortlessly.</p>
+                                                                                                                                                                                                                    <img class="rounded-2xl w-[280px] h-[168px] mx-[15px]" src="/img/img-slider1.png"
+                                                                                                                                                                                                                        alt="Domain Solutions">
+                                                                                                                                                                                                                </div>
+                                                                                                                                                                                                            </div>
 
-                                                                                                                                                                <div class="item bg-[#121733] border-2 border-[#793E6F] w-[310px] h-[384px] inline-block relative">
-                                                                                                                                                                    <div class="content">
-                                                                                                                                                                        <div class="heading-slider flex border-b-[1px] mx-6 my-4 self-center">
-                                                                                                                                                                            <h3 class="text-white font-semibold text-left text-2xl w-32 pb-4">Hosting Packages
-                                                                                                                                                                            </h3>
-                                                                                                                                                                            <button id="next-up"
-                                                                                                                                                                                class="w-12 h-12 rounded-[50%] bg-white transition hover:bg-gray-300 ml-20 mt-1"><i
-                                                                                                                                                                                    class="fa-lg fa-solid fa-arrow-right fa-rotate-by"
-                                                                                                                                                                                    style="--fa-rotate-angle: -45deg;"></i></button>
-                                                                                                                                                                        </div>
+                                                                                                                                                                                                            <div class="item bg-[#121733] border-2 border-[#793E6F] w-[310px] h-[384px] inline-block relative">
+                                                                                                                                                                                                                <div class="content">
+                                                                                                                                                                                                                    <div class="heading-slider flex border-b-[1px] mx-6 my-4 self-center">
+                                                                                                                                                                                                                        <h3 class="text-white font-semibold text-left text-2xl w-32 pb-4">Hosting Packages
+                                                                                                                                                                                                                        </h3>
+                                                                                                                                                                                                                        <button id="next-up"
+                                                                                                                                                                                                                            class="w-12 h-12 rounded-[50%] bg-white transition hover:bg-gray-300 ml-20 mt-1"><i
+                                                                                                                                                                                                                                class="fa-lg fa-solid fa-arrow-right fa-rotate-by"
+                                                                                                                                                                                                                                style="--fa-rotate-angle: -45deg;"></i></button>
+                                                                                                                                                                                                                    </div>
 
-                                                                                                                                                                        <p class="text-left text-gray-300 mx-6 my-4">Ready to launch your website? Get hosting from us
-                                                                                                                                                                            and get online with easily!</p>
-                                                                                                                                                                        <img class="rounded-2xl w-[280px] h-[168px] mx-[15px]" src="/img/img-slider2.png"
-                                                                                                                                                                            alt="Domain Solutions">
-                                                                                                                                                                    </div>
-                                                                                                                                                                </div>
+                                                                                                                                                                                                                    <p class="text-left text-gray-300 mx-6 my-4">Ready to launch your website? Get hosting from us
+                                                                                                                                                                                                                        and get online with easily!</p>
+                                                                                                                                                                                                                    <img class="rounded-2xl w-[280px] h-[168px] mx-[15px]" src="/img/img-slider2.png"
+                                                                                                                                                                                                                        alt="Domain Solutions">
+                                                                                                                                                                                                                </div>
+                                                                                                                                                                                                            </div>
 
-                                                                                                                                                                <div class="item bg-[#121733] border-2 border-[#793E6F] w-[310px] h-[384px] inline-block relative">
-                                                                                                                                                                    <div class="content">
-                                                                                                                                                                        <div class="heading-slider flex border-b-[1px] mx-6 my-4 self-center">
-                                                                                                                                                                            <h3 class="text-white font-semibold text-left text-2xl w-32 pb-4">VPS Purchase
-                                                                                                                                                                            </h3>
-                                                                                                                                                                            <button id="next-up"
-                                                                                                                                                                                class="w-12 h-12 rounded-[50%] bg-white transition hover:bg-gray-300 ml-20 mt-1"><i
-                                                                                                                                                                                    class="fa-lg fa-solid fa-arrow-right fa-rotate-by"
-                                                                                                                                                                                    style="--fa-rotate-angle: -45deg;"></i></button>
-                                                                                                                                                                        </div>
+                                                                                                                                                                                                            <div class="item bg-[#121733] border-2 border-[#793E6F] w-[310px] h-[384px] inline-block relative">
+                                                                                                                                                                                                                <div class="content">
+                                                                                                                                                                                                                    <div class="heading-slider flex border-b-[1px] mx-6 my-4 self-center">
+                                                                                                                                                                                                                        <h3 class="text-white font-semibold text-left text-2xl w-32 pb-4">VPS Purchase
+                                                                                                                                                                                                                        </h3>
+                                                                                                                                                                                                                        <button id="next-up"
+                                                                                                                                                                                                                            class="w-12 h-12 rounded-[50%] bg-white transition hover:bg-gray-300 ml-20 mt-1"><i
+                                                                                                                                                                                                                                class="fa-lg fa-solid fa-arrow-right fa-rotate-by"
+                                                                                                                                                                                                                                style="--fa-rotate-angle: -45deg;"></i></button>
+                                                                                                                                                                                                                    </div>
 
-                                                                                                                                                                        <p class="text-left text-gray-300 mx-6 my-4">Upgrade to VPS hosting for better speed, security,
-                                                                                                                                                                            and reliability with our product.</p>
-                                                                                                                                                                        <img class="rounded-2xl w-[280px] h-[168px] mx-[15px]" src="/img/img-slider3.png"
-                                                                                                                                                                            alt="Domain Solutions">
-                                                                                                                                                                    </div>
-                                                                                                                                                                </div>
-                                                                                                                                                            </div>
-                                                                                                                                                            <div class="icon-group z-[222222] self-center">
-                                                                                                                                                                <button style="left: 20%" id="next"
-                                                                                                                                                                    class="w-12 h-12 rounded-md rotate-45 border border-[#684A90] transition hover:bg-[#6B60DB]"><i
-                                                                                                                                                                        class="icon-next fa-solid fa-angle-right"></i></button>
-                                                                                                                                                            </div>
-                                                                                                                                                        </div> -->
+                                                                                                                                                                                                                    <p class="text-left text-gray-300 mx-6 my-4">Upgrade to VPS hosting for better speed, security,
+                                                                                                                                                                                                                        and reliability with our product.</p>
+                                                                                                                                                                                                                    <img class="rounded-2xl w-[280px] h-[168px] mx-[15px]" src="/img/img-slider3.png"
+                                                                                                                                                                                                                        alt="Domain Solutions">
+                                                                                                                                                                                                                </div>
+                                                                                                                                                                                                            </div>
+                                                                                                                                                                                                        </div>
+                                                                                                                                                                                                        <div class="icon-group z-[222222] self-center">
+                                                                                                                                                                                                            <button style="left: 20%" id="next"
+                                                                                                                                                                                                                class="w-12 h-12 rounded-md rotate-45 border border-[#684A90] transition hover:bg-[#6B60DB]"><i
+                                                                                                                                                                                                                    class="icon-next fa-solid fa-angle-right"></i></button>
+                                                                                                                                                                                                        </div>
+                                                                                                                                                                                                    </div> -->
             <!-- End card slider feature -->
         </div>
         <!-- End of Hero Section -->
@@ -149,9 +149,9 @@
     <!-- End of About Section -->
 
     <!-- Start of Faq Section -->
-    <section class="elementor-section elementor-top-section relative flex bg-[#12294A] min-h-full justify-self-auto">
+    <section class="elementor-section elementor-top-section relative flex bg-[#12294A] min-h-full justify-center">
         <div
-            class="elementor-container flex pl-20 pr-28 py-10 my-10 xs:flex-col xs:px-10 xs:mx-0 xs:my-10 xs:py-5 sm:flex-col sm:px-10 sm:mx-0 sm:my-10 sm:py-5 md:px-2">
+            class="elementor-container flex justify-center items-center pl-20 pr-28 py-10 my-10 xs:flex-col xs:px-10 xs:mx-0 xs:my-10 xs:py-5 sm:flex-col sm:px-10 sm:mx-0 sm:my-10 sm:py-5 md:px-2">
             <div
                 class="elementor-column flex flex-col w-3/6 p-5 border-r-[1px] border-[#FFFFFF14] xs:w-full xs:border-none xs:p-0 sm:w-full sm:border-none sm:px-0 md:px-8">
                 <div class="elementor-element title mb-5 xs:mb-0 sm:mb-0 md:mb-0">
@@ -160,14 +160,15 @@
                 </div>
                 <div class="elementor-element btn-contact mt-5 xs:mt-8 sm:mt-8">
                     <a href="#"
-                        class="signup-button flex text-base text-center font-bold rounded-full mb-16 text-[#12294A] bg-[#F5F5F5] h-[48px] py-0 px-6 w-fit justify-center items-center xs:w-full xs:mb-8 sm:w-full sm:mb-8 hover:bg-[#0165FF] hover:text-white duration-300">Contact
+                        class="signup-button flex text-base text-center font-bold rounded-full text-[#12294A] bg-[#F5F5F5] h-[48px] py-0 px-6 w-fit justify-center items-center xs:w-full xs:mb-8 sm:w-full sm:mb-8 hover:bg-[#0165FF] hover:text-white duration-300">Contact
                         Us</a>
                 </div>
             </div>
 
-            <div class="elementor-column w-3/6 accordion flex flex-col px-5 xs:w-full xs:px-0 sm:w-full sm:px-0">
+            <div
+                class="elementor-column w-3/6 accordion flex flex-col items-center gap-2 px-5 xs:w-full xs:px-0 sm:w-full sm:px-0">
                 <div class="elementor-element accordion-item relative">
-                    <input type="checkbox" id="accordion-1" class="accordion-checkbox appearance-none peer">
+                    <input type="checkbox" id="accordion-1" class="accordion-checkbox appearance-none peer hidden">
                     <label for="accordion-1"
                         class="accordion-button flex flex-row justify-between py-3 px-5 cursor-pointer items-center xs:px-0 xs:py-2 sm:px-0 sm:py-2 md:py-2 after:absolute after:content-['+'] after:right-5 after:text-2xl after:text-white peer-checked:after:transform peer-checked:after:rotate-45 after:duration-300">
                         <h4 class="heading text-xl font-bold text-white">Develop New Store</h4>
@@ -181,8 +182,9 @@
                         </div>
                     </div>
                 </div>
+
                 <div class="elementor-element accordion-item relative">
-                    <input type="checkbox" id="accordion-2" class="accordion-checkbox appearance-none peer">
+                    <input type="checkbox" id="accordion-2" class="accordion-checkbox appearance-none peer hidden">
                     <label for="accordion-2"
                         class="accordion-button flex flex-row justify-between py-3 px-5 cursor-pointer items-center xs:px-0 sm:px-0 after:absolute after:content-['+'] after:right-5 after:text-xl after:text-white peer-checked:after:transform peer-checked:after:rotate-45 after:duration-300">
                         <h4 class="heading text-xl font-bold text-white">Audit & Technial Support</h4>
@@ -196,8 +198,9 @@
                         </div>
                     </div>
                 </div>
+
                 <div class="elementor-element accordion-item relative">
-                    <input type="checkbox" id="accordion-3" class="accordion-checkbox appearance-none peer">
+                    <input type="checkbox" id="accordion-3" class="accordion-checkbox appearance-none peer hidden">
                     <label for="accordion-3"
                         class="accordion-button flex flex-row justify-between py-3 px-5 cursor-pointer items-center xs:px-0 sm:px-0 after:absolute after:content-['+'] after:right-5 after:text-2xl after:text-white peer-checked:after:transform peer-checked:after:rotate-45 after:duration-300">
                         <h4 class="heading text-xl font-bold text-white">Manual & Automated QA</h4>

@@ -5,6 +5,7 @@ use App\Http\Controllers\UserController;
 use App\Http\Controllers\AdminController;
 use App\Http\Controllers\LoginController;
 use App\Http\Controllers\ProductController;
+use App\Http\Controllers\TransactionsController;
 
 Route::prefix('/')->group(function () {
     Route::get('/', [UserController::class, 'index'])->name('index');
@@ -29,10 +30,13 @@ Route::prefix('admin')->middleware('IsAdmin')->group(function () {
     Route::delete('/delete{categories}', [AdminController::class, 'destroy'])->name('admin.destroy');
 
     // CRUD Product
-    Route::get('/product', [productController::class, 'showProduct'])->name('admin.showProduct');
-    Route::get('/createProduct', [productController::class, 'createProduct'])->name('admin.createProduct');
-    Route::post('/storeProduct', [productController::class, 'storeProduct'])->name('admin.storeProduct');
-    Route::get('product/{id}/editProduct', [productController::class, 'editProduct'])->name('admin.editProduct');
-    Route::match(['get', 'post'], 'product/{id}/updateProduct', [productController::class, 'updateProduct'])->name('admin.updateProduct');
-    Route::delete('product/{id}/destroyProduct', [productController::class, 'destroyProduct'])->name('admin.destroyProduct');
+    Route::get('/product', [ProductController::class, 'showProduct'])->name('admin.showProduct');
+    Route::get('/createProduct', [ProductController::class, 'createProduct'])->name('admin.createProduct');
+    Route::post('/storeProduct', [ProductController::class, 'storeProduct'])->name('admin.storeProduct');
+    Route::get('product/{id}/editProduct', [ProductController::class, 'editProduct'])->name('admin.editProduct');
+    Route::match(['get', 'post'], 'product/{id}/updateProduct', [ProductController::class, 'updateProduct'])->name('admin.updateProduct');
+    Route::delete('product/{id}/destroyProduct', [ProductController::class, 'destroyProduct'])->name('admin.destroyProduct');
+
+    // Transactions
+    Route::get('/transactions', [TransactionsController::class, 'index'])->name('admin.showTransactions');
 });

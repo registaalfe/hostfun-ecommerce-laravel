@@ -27,17 +27,4 @@ class Product extends Model
     {
         return $this->belongsTo(CategoryProduct::class, 'category_id');
     }
-
-    // Feature Search
-    public function scopeFilter(Builder $query, array $filters): void
-    {
-        $query->when(
-            $filters['search'] ?? false,
-            function ($query, $search) {
-                $query->where('name_product', 'like', '%' . $search . '%')->orWhereHas('category', function ($query) use ($search) {
-                    $query->where('name', 'like', '%' . $search . '%');
-                });
-            }
-        );
-    }
 }
