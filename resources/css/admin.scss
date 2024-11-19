@@ -45,3 +45,18 @@
 .transition-all {
     transition: all 0.3s ease;
 }
+
+div.dt-container {
+    margin-bottom: 3em;
+}
+
+table.dataTable > tbody > tr > th,
+table.dataTable > tbody > tr > td {
+    border-width: 0 !important;
+}
+
+table.dataTable > thead > tr > th,
+table.dataTable > thead > tr > td {
+    padding: 10px;
+    border-bottom: 0px !important;
+}

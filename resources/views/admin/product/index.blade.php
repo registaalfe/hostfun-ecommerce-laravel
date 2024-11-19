@@ -10,7 +10,7 @@
             </a>
         </div>
 
-        <table id="" class="display" class="min-w-full table-auto">
+        <table id="" class="display min-w-full table-auto">
             <thead class="bg-[#F7F9FB] border sticky -top-0.5 z-999999">
                 <tr>
                     <th class="px-6 py-3 w-0 text-left text-sm text-[#161519] tracking-wider">
@@ -26,7 +26,7 @@
                         Price Product
                     </th>
                     <th class="px-6 py-3 font-karla text-left text-sm font-semibold text-[#161519] tracking-wider">
-                    </th>
+                        Action</th>
                 </tr>
             </thead>
             <tbody class="bg-white">
