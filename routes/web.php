@@ -18,6 +18,9 @@ Route::prefix('/')->group(function () {
     Route::get('/login', [LoginController::class, 'loginForm'])->name('login')->middleware('guest');
     Route::post('/auth', [LoginController::class, 'authenticate'])->name('auth');
     Route::post('/logout', [UserController::class, 'logout'])->name('logout');
+
+    // Dashboard User
+    Route::get('/hosting', [UserController::class, 'cardProduct'])->name('cardProduct')->middleware('auth');
 });
 
 Route::prefix('admin')->middleware('IsAdmin')->group(function () {

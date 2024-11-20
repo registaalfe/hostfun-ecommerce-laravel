@@ -14,7 +14,12 @@ class UserController extends Controller
      */
     public function index()
     {
-        return view('users.index');
+        return view('users.dashboard.index');
+    }
+
+    public function cardProduct()
+    {
+        return view('users.product.index');
     }
 
     public function logout(Request $request): RedirectResponse
