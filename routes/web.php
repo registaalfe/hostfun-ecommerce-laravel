@@ -20,7 +20,10 @@ Route::prefix('/')->group(function () {
     Route::post('/logout', [UserController::class, 'logout'])->name('logout');
 
     // Dashboard User
-    Route::get('/hosting', [UserController::class, 'cardProduct'])->name('cardProduct')->middleware('auth');
+    Route::middleware('auth')->group(function () {
+        Route::get('/hosting', [UserController::class, 'cardProduct'])->name('cardProduct');
+        Route::get('detailProduct', [UserController::class, 'detailProduct'])->name('detailProduct');
+    });
 });
 
 Route::prefix('admin')->middleware('IsAdmin')->group(function () {
