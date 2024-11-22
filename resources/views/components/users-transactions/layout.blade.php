@@ -34,20 +34,12 @@
 
 <body>
     <!-- start: Header -->
-    <x-users.header></x-users.header>
-    <!-- end: Header -->
-
-    <!-- start: Header -->
-    <x-users.nav></x-users.nav>
+    <x-users-transactions.header></x-users-transactions.header>
     <!-- end: Header -->
 
     <!-- start: Content -->
     {{ $slot }}
     <!-- end: Content -->
-
-    <!-- start: Footer -->
-    <x-users.footer></x-users.footer>
-    <!-- end: Footer -->
 
     <!-- Swiper JS-->
     <script src="https://cdn.josetxu.com/js/pure-pajinate.es5.min.js"></script>

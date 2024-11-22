@@ -22,7 +22,7 @@ Route::prefix('/')->group(function () {
     // Dashboard User
     Route::middleware('auth')->group(function () {
         Route::get('/hosting', [UserController::class, 'cardProduct'])->name('cardProduct');
-        Route::get('detailProduct', [UserController::class, 'detailProduct'])->name('detailProduct');
+        Route::get('product/{id}/detailProduct', [UserController::class, 'detailProduct'])->name('detailProduct');
     });
 });
 

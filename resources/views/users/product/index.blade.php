@@ -4,7 +4,7 @@
             @foreach ($products as $product)
                 <!-- Product 1 -->
                 <div class="w-full sm:w-1/2 md:w-1/3 lg:w-1/4 px-3 mb-6">
-                    <a href="{{ route('detailProduct', $product->id) }}">
+                    <a href="{{ route('detailProduct', $product->id_product) }}">
                         <div class="bg-white rounded-lg shadow-md overflow-hidden">
                             <div class="relative">
                                 <img alt="{{ $product->name }}" class="w-full h-64 object-cover" height="400"
