@@ -23,6 +23,8 @@ Route::prefix('/')->group(function () {
     Route::middleware('auth')->group(function () {
         Route::get('/hosting', [UserController::class, 'cardProduct'])->name('cardProduct');
         Route::get('product/{id}/detailProduct', [UserController::class, 'detailProduct'])->name('detailProduct');
+        Route::get('/payment', [UserController::class, 'payment'])->name('payment');
+        Route::get('/finished', [UserController::class, 'finishpayment'])->name('finishpayment');
     });
 });
 

@@ -1,5 +1,8 @@
 <x-users.layout>
     <div class="max-w-6xl mx-auto px-14 py-8 bg-[#F5F5F5] min-w-full min-h-full">
+        <div class="flex mx-6 pb-4 elementor-column text-lg font-medium font-karla leading-[1.3] text-[#161519]">
+            <h3>Most Picked</h3>
+        </div>
         <div class="flex flex-wrap mx-3">
             @foreach ($products as $product)
                 <!-- Product 1 -->

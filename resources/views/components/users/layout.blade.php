@@ -37,10 +37,6 @@
     <x-users.header></x-users.header>
     <!-- end: Header -->
 
-    <!-- start: Header -->
-    <x-users.nav></x-users.nav>
-    <!-- end: Header -->
-
     <!-- start: Content -->
     {{ $slot }}
     <!-- end: Content -->

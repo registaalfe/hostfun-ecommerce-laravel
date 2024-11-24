@@ -8,7 +8,7 @@
     <title>Hostfun</title>
     @vite('resources/css/style.css')
 
-    <link rel="icon" href="images/icon.png" type="image/x-icon">
+    <link rel="icon" href="{{ asset('images/icon.png') }}" type="image/x-icon">
 
     <!-- Google Font -->
     <link rel="preconnect" href="https://fonts.googleapis.com" />
