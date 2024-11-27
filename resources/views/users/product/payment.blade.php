@@ -20,7 +20,7 @@
         </div>
 
         <div class="flex flex-col items-center justify-center pb-6 mb-6">
-            <h1 class="text-3xl font-bold text-[#12294A] mb-2">Payment
+            <h1 class="text-3xl font-bold text-[#12294A] mb-2">Payment Details
             </h1>
             <p class="font-karla text-gray-400">Kindly follow the instruction below</p>
         </div>

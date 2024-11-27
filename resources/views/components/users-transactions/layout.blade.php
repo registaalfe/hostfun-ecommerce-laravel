@@ -43,6 +43,40 @@
 
     <!-- Swiper JS-->
     <script src="https://cdn.josetxu.com/js/pure-pajinate.es5.min.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+
+    <script>
+        $(document).ready(function() {
+            $('#duration').on('change', function() {
+                // Ambil nilai duration dan product_id
+                const duration = $(this).val();
+                const productId = $('#product_id').val();
+
+                // Kirim data ke server menggunakan AJAX
+                $.ajax({
+                    url: '{{ route('calculationSubtotal') }}',
+                    type: 'POST',
+                    data: {
+                        _token: '{{ csrf_token() }}',
+                        duration: duration,
+                        product_id: productId,
+                    },
+                    success: function(response) {
+                        if (response.success) {
+                            // Update subtotal dengan nilai dari server
+                            $('#subtotal').text('Rp. ' + response.formatted_subtotal);
+                        } else {
+                            alert('Failed to calculate subtotal');
+                        }
+                    },
+                    error: function(xhr, status, error) {
+                        console.error(xhr.responseText);
+                        alert('An error occurred while calculating the subtotal.');
+                    },
+                });
+            });
+        });
+    </script>
 </body>
 
 </html>

@@ -3,6 +3,7 @@
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\UserController;
 use App\Http\Controllers\AdminController;
+use App\Http\Controllers\CheckoutController;
 use App\Http\Controllers\LoginController;
 use App\Http\Controllers\ProductController;
 use App\Http\Controllers\TransactionsController;
@@ -21,8 +22,10 @@ Route::prefix('/')->group(function () {
 
     // Dashboard User
     Route::middleware('auth')->group(function () {
-        Route::get('/hosting', [UserController::class, 'cardProduct'])->name('cardProduct');
-        Route::get('product/{id}/detailProduct', [UserController::class, 'detailProduct'])->name('detailProduct');
+        Route::get('/hosting', [CheckoutController::class, 'index'])->name('hosting');
+        Route::get('product/{id}/detailProduct', [CheckoutController::class, 'show'])->name('detailProduct');
+        Route::post('/calculationSubtotal', [CheckoutController::class, 'calculationSubtotal'])->name('calculationSubtotal');
+        Route::post('/checkoutProduct', [CheckoutController::class, 'store'])->name('checkoutProduct');
         Route::get('/payment', [UserController::class, 'payment'])->name('payment');
         Route::get('/finished', [UserController::class, 'finishpayment'])->name('finishpayment');
     });

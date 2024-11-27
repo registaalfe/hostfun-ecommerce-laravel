@@ -28,7 +28,7 @@
                                 </div>
                                 <div class="right-item flex flex-col items-baseline space-x-2">
                                     <span class="text-gray-800 text-xl font-bold">
-                                        {{ number_format($product->price_product, 2, ',', '.') }}
+                                        Rp. {{ number_format($product->price_product, 2, ',', '.') }}
                                     </span>
                                 </div>
                             </div>

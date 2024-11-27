@@ -15,7 +15,7 @@ return new class extends Migration
             $table->id();
             $table->string('no_invoice', 20)->unique();
             $table->unsignedBigInteger('customer_id');
-            $table->decimal('total_amount', 15, 2);
+            $table->integer('total_amount');
 
             // Define custom timestamp columns
             $table->timestamp('transaction_date')->nullable();

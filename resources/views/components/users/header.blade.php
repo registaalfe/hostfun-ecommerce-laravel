@@ -30,7 +30,7 @@
                         class="topnav__link text-[#161519] text-base font-light hover:text-[#525252] xs:text-lg xs:text-left xs:text-white sm:text-lg sm:text-white sm:text-left md:text-lg md:text-white md:text-left lg:font-medium xl:font-medium">Home</a>
                 </li>
                 <li class="topnav__item">
-                    <a href="{{ route('cardProduct') }}"
+                    <a href="{{ route('hosting') }}"
                         class="topnav__link text-[#161519] text-base font-light hover:text-[#525252] xs:text-lg xs:text-left xs:text-white sm:text-lg sm:text-white sm:text-left md:text-lg md:text-white md:text-left lg:font-medium xl:font-medium">Hosting</a>
                 </li>
                 <li class="topnav__item">
