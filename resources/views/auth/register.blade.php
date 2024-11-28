@@ -46,7 +46,7 @@
                                 @enderror
                             </div>
 
-                            <div class="form-group flex flex-col w-80 gap-1">
+                            <div class="form-group flex flex-row w-80 gap-1">
                                 <div
                                     class="input-group flex flex-row w-80 items-center justify-center bg-[#EFF2F6] rounded-md px-2 py-2 text-gray-500 focus-within:ring-1 focus-within:shadow-md focus-within:ring-[#0165FF] focus-within:border-[#0165FF] hover:shadow-[0_0_0_2px] hover:duration-300 hover:shadow-blue-200">
                                     <span class="icon-input-group">
@@ -57,16 +57,13 @@
                                         </svg>
                                     </span>
                                     <input
-                                        class="font-sans w-full border-none rounded-md px-2 py-0 bg-[#EFF2F6] placeholder:text-gray-500 sm:text-sm sm:leading-6"
+                                        class="font-sans w-full border-none rounded-md px-2 py-0 bg-[#EFF2F6] placeholder:text-gray-500 focus:ring-0 sm:text-sm sm:leading-6"
                                         type="email" name="email" id="email" placeholder="Email"
-                                        :value="old('email')" required autocomplete="email">
+                                        :value="old('email')" required autofocus autocomplete="email">
                                 </div>
-                                @error('email')
-                                    <span class="text-red-500 text-sm">{{ $message }}</span>
-                                @enderror
                             </div>
 
-                            <div class="form-group flex flex-col w-80 gap-1">
+                            <div class="form-group flex flex-row w-80 gap-1">
                                 <div
                                     class="input-group flex flex-row w-80 items-center justify-center bg-[#EFF2F6] rounded-md px-2 py-2 text-gray-500 focus-within:ring-1 focus-within:shadow-md focus-within:ring-[#0165FF] focus-within:border-[#0165FF] hover:shadow-[0_0_0_2px] hover:duration-300 hover:shadow-blue-200">
                                     <span class="icon-input-group">
@@ -77,7 +74,7 @@
                                         </svg>
                                     </span>
                                     <input
-                                        class="font-sans w-full border-none rounded-md px-2 py-0 bg-[#EFF2F6] placeholder:text-gray-500 sm:text-sm sm:leading-6"
+                                        class="font-sans w-full border-none rounded-md px-2 py-0 bg-[#EFF2F6] placeholder:text-gray-500 focus:ring-0 sm:text-sm sm:leading-6"
                                         type="password" name="password" id="password" placeholder="Password" required
                                         autocomplete="new-password">
                                 </div>

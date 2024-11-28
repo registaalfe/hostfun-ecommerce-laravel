@@ -70,13 +70,14 @@ class CheckoutController extends Controller
      */
     public function store(Request $request)
     {
-        // dd($request->all());
+        // Memastikan data yang masuk valid, jika data tidak valid, proses berhenti, dan error ditampilkan ke use
         $request->validate([
             'customer_id' => 'required|exists:users,id',
             'product_id' => 'required|exists:products,id_product',
             'duration' => 'required|integer|in:1,3,6,12',
         ]);
 
+        //Memastikan jika ada error selama proses, semua perubahan data akan dibatalkan, kita tidak mau data setengah jadi masuk ke database
         DB::beginTransaction();
 
         try {
@@ -92,14 +93,12 @@ class CheckoutController extends Controller
                 'update_on' => now(),
                 'status' => 'pending',
             ]);
-            // dd($transaction);
 
             // Ambil data produk untuk menghitung subtotal
             $product = Product::findOrFail($request->product_id);
             $subtotal = $product->price_product * $request->duration;
-            // dd($product, $subtotal);
 
-            // Simpan data ke tabel `transaction_items`
+            // Menyimpan detail produk apa saja yang dibeli di transaksi ini
             Transactions_Item::create([
                 'transaction_id' => $transaction->id,
                 'product_id' => $request->product_id,
@@ -116,6 +115,8 @@ class CheckoutController extends Controller
             // Redirect ke halaman pembayaran
             return redirect()->route('payment', ['id' => $transaction->id]);
         } catch (\Exception $e) {
+
+            //Kalau ada error selama proses, transaksi database dibatalkan, dan user diberi pesan error
             DB::rollBack();
             return back()->withErrors('Checkout failed. Please try again.');
         }
