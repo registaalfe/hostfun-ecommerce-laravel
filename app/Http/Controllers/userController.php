@@ -17,16 +17,6 @@ class UserController extends Controller
         return view('users.dashboard.index');
     }
 
-    public function payment()
-    {
-        return view('users.product.payment');
-    }
-
-    public function finishPayment()
-    {
-        return view('users.product.finishpayment');
-    }
-
     public function logout(Request $request): RedirectResponse
     {
         Auth::logout();

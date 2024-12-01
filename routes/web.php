@@ -3,9 +3,10 @@
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\UserController;
 use App\Http\Controllers\AdminController;
-use App\Http\Controllers\CheckoutController;
 use App\Http\Controllers\LoginController;
 use App\Http\Controllers\ProductController;
+use App\Http\Controllers\CheckoutController;
+use App\Http\Controllers\UserPaymentController;
 use App\Http\Controllers\TransactionsController;
 
 Route::prefix('/')->group(function () {
@@ -26,8 +27,9 @@ Route::prefix('/')->group(function () {
         Route::get('product/{id}/detailProduct', [CheckoutController::class, 'show'])->name('detailProduct');
         Route::post('/calculationSubtotal', [CheckoutController::class, 'calculationSubtotal'])->name('calculationSubtotal');
         Route::post('/checkoutProduct', [CheckoutController::class, 'store'])->name('checkoutProduct');
-        Route::get('/payment', [UserController::class, 'payment'])->name('payment');
-        Route::get('/finished', [UserController::class, 'finishpayment'])->name('finishpayment');
+        Route::get('transaction/{id}/payment', [UserPaymentController::class, 'index'])->name('payment');
+        Route::post('paymentStore', [UserPaymentController::class, 'store'])->name('paymentStore');
+        Route::get('/finished', [UserPaymentController::class, 'finishpayment'])->name('finishpayment');
     });
 });
 

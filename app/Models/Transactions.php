@@ -2,8 +2,9 @@
 
 namespace App\Models;
 
-use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Database\Eloquent\Model;
+use Illuminate\Database\Eloquent\Relations\HasMany;
+use Illuminate\Database\Eloquent\Factories\HasFactory;
 
 class Transactions extends Model
 {
@@ -27,5 +28,11 @@ class Transactions extends Model
         $nextId = $lastTransaction ? $lastTransaction->id + 1 : 1; //Jika ada transaksi sebelumnya, ID tersebut diambil lalu ditambahkan 1.
 
         return 'INV' . date('Ymd') . str_pad($nextId, 4, '0', STR_PAD_LEFT);
+    }
+
+    // Relationship with Payment
+    public function payments(): HasMany
+    {
+        return $this->hasMany(PaymentUser::class, 'transaction_id');
     }
 }
