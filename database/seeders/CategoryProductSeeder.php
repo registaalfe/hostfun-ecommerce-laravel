@@ -15,10 +15,10 @@ class CategoryProductSeeder extends Seeder
     {
         // Data kategori yang ingin Anda tambahkan
         $categories = [
-            ['name' => 'Hosting'],
-            ['name' => 'VPS'],
-            ['name' => 'Cloud'],
-            ['name' => 'Domain'],
+            ['name' => 'Hosting', 'created_at' => now(), 'updated_at' => now()],
+            ['name' => 'VPS', 'created_at' => now(), 'updated_at' => now()],
+            ['name' => 'Cloud', 'created_at' => now(), 'updated_at' => now()],
+            ['name' => 'Domain', 'created_at' => now(), 'updated_at' => now()],
         ];
 
         // Masukkan data ke dalam tabel categories

@@ -21,6 +21,10 @@
 
     </main>
     <!-- end: Main -->
+
+    @include('sweetalert::alert')
+
 </body>
+
 
 </html>

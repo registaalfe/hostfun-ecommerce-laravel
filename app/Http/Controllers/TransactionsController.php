@@ -11,6 +11,9 @@ class TransactionsController extends Controller
      */
     public function index()
     {
+        $title = 'Delete User!';
+        $text = "Are you sure you want to delete?";
+        confirmDelete($title, $text);
         return view('admin.transactions.index');
     }
 

@@ -15,7 +15,13 @@ class CheckoutController extends Controller
      */
     public function index()
     {
-        $products = Product::with('category')->latest()->paginate(12);
+        $products =
+            Product::with(['category' => function ($query) {
+                $query->take(1);  // Batasi 1 kategori (jika ada lebih dari 1 kategori dalam relasi)
+            }])
+            ->latest()   // Mengurutkan produk berdasarkan yang terbaru
+            ->take(4)    // Ambil hanya 4 produk terakhir
+            ->get();
         return view('users.product.index', compact('products'));
     }
 
@@ -77,6 +83,7 @@ class CheckoutController extends Controller
             'duration' => 'required|integer|in:1,3,6,12',
         ]);
 
+
         //Memastikan jika ada error selama proses, semua perubahan data akan dibatalkan, kita tidak mau data setengah jadi masuk ke database
         DB::beginTransaction();
 
@@ -112,7 +119,7 @@ class CheckoutController extends Controller
 
             DB::commit();
 
-            // Redirect ke halaman pembayaran
+            // Redirect ke halaman pembayaran di mana {id} adalah ID dari transaksi yang baru saja dibuat.
             return redirect()->route('payment', ['id' => $transaction->id]);
         } catch (\Exception $e) {
 

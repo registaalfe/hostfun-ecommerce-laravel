@@ -25,11 +25,12 @@ class ProductSeeder extends Seeder
         $data = [];
 
         // Loop untuk menambahkan 1 juta data
-        for ($i = 0; $i < 100; $i++) {
+        for ($i = 0; $i < 20; $i++) {
             // Setiap data produk memiliki nama, kategori yang diambil dari database, dan harga
+            $category_id = $faker->randomElement($categories);
             $data[] = [
                 'name_product' => $faker->word, // Menghasilkan kata acak untuk nama produk
-                'category_id' => $faker->randomElement($categories), // Memilih category_id dari data yang sudah ada
+                'category_id' => $category_id, // Memilih category_id dari data yang sudah ada
                 'price_product' => rand(15000, 250000), // Harga acak antara 100 sampai 1000
                 'image_path' => $faker->imageUrl(640, 480, 'product', true), // URL gambar acak
                 'created_at' => now(),

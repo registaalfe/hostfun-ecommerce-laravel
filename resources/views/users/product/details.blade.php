@@ -66,7 +66,7 @@
                             <a href="#" class="text-[#12294A]">Tax</a>
                             <span class="text-[#12294A]">Free</span>
                         </div>
-                        <button type="submit"
+                        <button type="submit" data-confirm-delete="true"
                             class="font-karla w-full bg-[#0165FF] text-white py-3 rounded text-lg font-bold hover:bg-[#12294A] duration-200">Continue</button>
                     </div>
                 </div>

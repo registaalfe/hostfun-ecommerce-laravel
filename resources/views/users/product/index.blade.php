@@ -23,7 +23,7 @@
                                         {{ $product->name_product }}
                                     </h3>
                                     <p class="text-gray-500 text-sm mt-1">
-                                        {{ $product->category->name }}
+                                        {{ $product['category'] ? $product['category']->name : 'No category' }}
                                     </p>
                                 </div>
                                 <div class="right-item flex flex-col items-baseline space-x-2">
@@ -36,10 +36,6 @@
                     </a>
                 </div>
             @endforeach
-
-            <div class="flex mx-auto mt-4">
-                {{ $products->links() }}
-            </div>
         </div>
     </div>
 

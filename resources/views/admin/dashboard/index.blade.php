@@ -12,16 +12,19 @@
                     </svg>
                 </div>
                 <div class="titlecard flex flex-col my-6 ml-6 gap-2">
-                    <h2 class="text-3xl text-white">10</h2>
+                    <h2 class="text-3xl text-white">{{ $categoryCount }}</h2>
                     <div class="flex flex-row justify-between">
                         <p class="text-sm text-white w-10">Completed Category</p>
-                        <span
-                            class="mr-8 transform opacity-0 group-hover:opacity-100 transition-opacity duration-300 cursor-pointer">
-                            <svg xmlns="http://www.w3.org/2000/svg" width="36" height="36" viewBox="0 0 24 24">
-                                <path fill="none" stroke="currentColor" stroke-linecap="round"
-                                    stroke-linejoin="round" stroke-width="1.5" d="m18 8l4 4m0 0l-4 4m4-4H2" />
-                            </svg>
-                        </span>
+                        <a class="mr-8" href="{{ route('admin.showCategory') }}">
+                            <span
+                                class="transform opacity-0 group-hover:opacity-100 transition-opacity duration-300 cursor-pointer">
+                                <svg xmlns="http://www.w3.org/2000/svg" width="36" height="36"
+                                    viewBox="0 0 24 24">
+                                    <path fill="none" stroke="currentColor" stroke-linecap="round"
+                                        stroke-linejoin="round" stroke-width="1.5" d="m18 8l4 4m0 0l-4 4m4-4H2" />
+                                </svg>
+                            </span>
+                        </a>
                     </div>
                 </div>
             </div>
@@ -34,16 +37,19 @@
                     </svg>
                 </div>
                 <div class="titlecard flex flex-col my-6 ml-6 gap-2">
-                    <h2 class="text-3xl text-white">66</h2>
+                    <h2 class="text-3xl text-white">{{ $productCount }}</h2>
                     <div class="flex flex-row justify-between">
                         <p class="text-sm text-white w-10">Product Show</p>
-                        <span
-                            class="mr-8 transform opacity-0 group-hover:opacity-100 transition-opacity duration-300 cursor-pointer">
-                            <svg xmlns="http://www.w3.org/2000/svg" width="36" height="36" viewBox="0 0 24 24">
-                                <path fill="none" stroke="currentColor" stroke-linecap="round"
-                                    stroke-linejoin="round" stroke-width="1.5" d="m18 8l4 4m0 0l-4 4m4-4H2" />
-                            </svg>
-                        </span>
+                        <a class="mr-8" href="{{ route('admin.showProduct') }}">
+                            <span
+                                class="transform opacity-0 group-hover:opacity-100 transition-opacity duration-300 cursor-pointer">
+                                <svg xmlns="http://www.w3.org/2000/svg" width="36" height="36"
+                                    viewBox="0 0 24 24">
+                                    <path fill="none" stroke="currentColor" stroke-linecap="round"
+                                        stroke-linejoin="round" stroke-width="1.5" d="m18 8l4 4m0 0l-4 4m4-4H2" />
+                                </svg>
+                            </span>
+                        </a>
                     </div>
                 </div>
             </div>
@@ -56,16 +62,19 @@
                     </svg>
                 </div>
                 <div class="titlecard flex flex-col my-6 ml-6 gap-2">
-                    <h2 class="text-3xl text-white">1100</h2>
+                    <h2 class="text-3xl text-white">{{ $transactionCount }}</h2>
                     <div class="flex flex-row justify-between">
                         <p class="text-sm text-white w-10">Success Transactions</p>
-                        <span
-                            class="mr-8 transform opacity-0 group-hover:opacity-100 transition-opacity duration-300 cursor-pointer">
-                            <svg xmlns="http://www.w3.org/2000/svg" width="36" height="36" viewBox="0 0 24 24">
-                                <path fill="none" stroke="currentColor" stroke-linecap="round"
-                                    stroke-linejoin="round" stroke-width="1.5" d="m18 8l4 4m0 0l-4 4m4-4H2" />
-                            </svg>
-                        </span>
+                        <a class="mr-8" href="{{ route('admin.showTransactions') }}">
+                            <span
+                                class="transform opacity-0 group-hover:opacity-100 transition-opacity duration-300 cursor-pointer">
+                                <svg xmlns="http://www.w3.org/2000/svg" width="36" height="36"
+                                    viewBox="0 0 24 24">
+                                    <path fill="none" stroke="currentColor" stroke-linecap="round"
+                                        stroke-linejoin="round" stroke-width="1.5" d="m18 8l4 4m0 0l-4 4m4-4H2" />
+                                </svg>
+                            </span>
+                        </a>
                     </div>
                 </div>
             </div>

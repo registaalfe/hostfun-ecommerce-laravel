@@ -43,7 +43,7 @@ class ProductController extends Controller
         Product::create($validatedData);
 
         Alert::success(
-            'Success Title',
+            'Success Added Product',
             'Success Message'
         );
 

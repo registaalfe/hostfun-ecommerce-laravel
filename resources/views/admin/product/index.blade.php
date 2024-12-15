@@ -42,7 +42,7 @@
                             {{ $product->category->name }}
                         </td>
                         <td class="px-6 py-4 whitespace-nowrap text-sm font-normal text-[#161519]">
-                            {{ number_format($product->price_product, 2, ',', '.') }}
+                            Rp. {{ number_format($product->price_product, 2, ',', '.') }}
                         </td>
                         <td
                             class="flex flex-row px-6 py-4 justify-end whitespace-nowrap text-sm font-normal text-right">
