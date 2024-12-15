@@ -16,9 +16,7 @@ class CheckoutController extends Controller
     public function index()
     {
         $products =
-            Product::with(['category' => function ($query) {
-                $query->take(1);  // Batasi 1 kategori (jika ada lebih dari 1 kategori dalam relasi)
-            }])
+            Product::with('category')
             ->latest()   // Mengurutkan produk berdasarkan yang terbaru
             ->take(4)    // Ambil hanya 4 produk terakhir
             ->get();
