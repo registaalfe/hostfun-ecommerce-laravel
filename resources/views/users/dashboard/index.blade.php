@@ -4,7 +4,7 @@
 
         <!-- Start of Hero Section -->
         <div class="elementor-container relative flex flex-col mb-16 min-h-full top-[60px]">
-            <div class="elementor-content flex flex-col left-1/2 gap-8">
+            <div class="elementor-content flex flex-col left-1/2 gap-4">
                 <div class="elementor-column btn-login text-center">
                     <a href="#"
                         class="signup-button text-sm text-center font-medium rounded-full text-[#0165FF] bg-[#EEF7FF] py-2 px-4 focus:outline-none max-sm:hidden duration-500">best
