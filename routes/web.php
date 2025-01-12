@@ -23,14 +23,24 @@ Route::prefix('/')->group(function () {
 
     // Dashboard User
     Route::middleware('auth')->group(function () {
-        Route::get('/hosting', [CheckoutController::class, 'index'])->name('hosting');
-        Route::get('product/{id}/detailProduct', [CheckoutController::class, 'show'])->name('detailProduct');
-        Route::post('/calculationSubtotal', [CheckoutController::class, 'calculationSubtotal'])->name('calculationSubtotal');
-        Route::post('/checkoutProduct', [CheckoutController::class, 'store'])->name('checkoutProduct');
-        Route::get('transaction/{id}/payment', [UserPaymentController::class, 'index'])->name('payment');
+        Route::get('/hosting', [UserPaymentController::class, 'index'])->name('hosting');
+        Route::get('product/{id}/detailProduct', [UserPaymentController::class, 'show'])->name('detailProduct');
+        Route::post('/calculationSubtotal', [UserPaymentController::class, 'calculationSubtotal'])->name('calculationSubtotal');
+        Route::post('/checkout', [UserPaymentController::class, 'checkout'])->name('checkout');
+        Route::get('transaction/{id}/payment', [UserPaymentController::class, 'toPayment'])->name('payment');
         Route::post('paymentStore', [UserPaymentController::class, 'store'])->name('paymentStore');
         Route::get('/finished', [UserPaymentController::class, 'finishpayment'])->name('finishpayment');
     });
+    // Route::middleware('auth')->group(function () {
+    //     Route::get('/hosting', [UserPaymentController::class, 'index'])->name('hosting');
+    //     Route::get('product/{id}/detailProduct', [UserPaymentController::class, 'show'])->name('detailProduct');
+    //     Route::post('/calculation-subtotal', [UserPaymentController::class, 'calculationSubtotal'])->name('calculation.subtotal');
+    //     Route::post('/checkout', [UserPaymentController::class, 'checkout'])->name('checkout');
+    //     Route::get('transaction/{id}/payment', [UserPaymentController::class, 'index'])->name('payment');
+    //     Route::post('paymentStore', [UserPaymentController::class, 'store'])->name('paymentStore');
+    //     Route::get('/paygateway', [UserPaymentController::class, 'payGateway'])->name('paygateway');
+    //     Route::get('/finished', [UserPaymentController::class, 'finishpayment'])->name('finishpayment');
+    // });
 });
 
 Route::prefix('admin')->middleware('IsAdmin')->group(function () {

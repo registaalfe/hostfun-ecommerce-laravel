@@ -1,4 +1,5 @@
 <x-users-transactions.layout>
+
     <div class="max-w-6xl mx-auto px-14 pt-12 pb-8 bg-[#F5F5F5] min-w-full min-h-full">
         <form action="{{ route('paymentStore') }}" method="POST" enctype="multipart/form-data">
             <input type="hidden" name="transaction_id" value="{{ $transaction->id }}" />
@@ -30,39 +31,7 @@
             </div>
 
             <div class="flex justify-center">
-                <div class="w-1/4 pr-8 border-r-[1px] border-gray-300">
-                    <div class="mb-6">
-                        <div class="flex items-center mb-4">
-                            <img alt="BCA logo" class="mr-4" height="50"
-                                src="{{ asset('images/icon-bankbca.jpg') }}" width="50" />
-                            <div>
-                                <p class="font-karla font-bold">
-                                    Bank Central Asia
-                                </p>
-                                <p class="font-karla">
-                                    2997 1024
-                                </p>
-                                <p class="font-karla">
-                                    Nieye Buddy
-                                </p>
-                            </div>
-                        </div>
-                        <div class="flex items-center">
-                            <img alt="BRI logo" class="mr-4" height="50"
-                                src="{{ asset('images/icon-bankbri.jpg') }}" width="50" />
-                            <div>
-                                <p class="font-karla font-bold">
-                                    Bank Rakyat Indonesia
-                                </p>
-                                <p class="font-karla">
-                                    2997 1024
-                                </p>
-                                <p class="font-karla">
-                                    Nieye Buddy
-                                </p>
-                            </div>
-                        </div>
-                    </div>
+                <div class="w-1/4 items-center">
                     <div class="text-gray-500">
                         <p class="font-karla flex justify-between">
                             <span>
@@ -91,38 +60,12 @@
                         </p>
                     </div>
                 </div>
-                <div class="w-1/4 pl-8">
-                    <div class="mb-4">
-                        <label class="block font-karla text-gray-700 mb-2">
-                            Upload Transfer
-                        </label>
-                        <input class="w-full px-3 py-1 border border-gray-300 rounded" name="upload_receipt"
-                            id="upload_receipt" type="file" />
-                    </div>
-                    <div class="mb-4">
-                        <label class="block font-karla text-gray-700 mb-2">
-                            Bank
-                        </label>
-                        <select class="w-full px-3 py-2 border border-gray-300 rounded" name="bank" id="bank">
-                            <option value="" disabled selected>Select Bank</option>
-                            @foreach ($banks as $bank)
-                                <option value="{{ $bank }}">{{ $bank }}</option>
-                            @endforeach
-                        </select>
-                    </div>
-                    <div class="mb-4">
-                        <label class="block font-karla text-gray-700 mb-2">
-                            Sender Name
-                        </label>
-                        <input class="w-full px-3 py-2 border border-gray-300 rounded"
-                            placeholder="Please type here ..." name="customer" id="customer" type="text" />
-                    </div>
-                </div>
             </div>
+
             <div class="text-center mt-20 flex flex-col items-center justify-center gap-2">
-                <button type="submit"
+                <button id="pay-button" type="submit"
                     class="w-1/4 py-2 bg-[#0165FF] text-white rounded hover:bg-[#12294A] duration-200">
-                    Continue
+                    Pay now
                 </button>
                 <button
                     class="w-1/4 py-2 bg-gray-200 text-gray-500 rounded hover:bg-[#12294A] hover:text-white duration-200">
@@ -130,7 +73,6 @@
                 </button>
             </div>
         </form>
-
     </div>
 
 </x-users-transactions.layout>

@@ -16,11 +16,8 @@ return new class extends Migration
             $table->string('no_invoice', 20)->unique();
             $table->unsignedBigInteger('customer_id');
             $table->integer('total_amount');
-
-            // Define custom timestamp columns
             $table->timestamp('transaction_date')->nullable();
             $table->timestamp('updated_on')->nullable();
-
             $table->enum('status', ['Pending', 'Completed', 'Cancelled'])->default('Pending');
         });
     }

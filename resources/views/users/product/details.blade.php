@@ -22,7 +22,7 @@
             <p class="font-karla text-gray-400">Please fill up the blank fields below</p>
         </div>
 
-        <form id="duration-form" action="{{ route('checkoutProduct') }}" method="POST">
+        <form id="duration-form" action="{{ route('checkout') }}" method="POST">
             @csrf
 
             <!-- Kolom hidden digunakan untuk menyimpan data tanpa menampilkan ke pengguna, tapi tetap dapat dikirim ke backend jika diperlukan. -->

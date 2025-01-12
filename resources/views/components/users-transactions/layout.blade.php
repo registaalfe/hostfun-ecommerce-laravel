@@ -24,7 +24,6 @@
     <script src="https://kit.fontawesome.com/8bcf7cf26c.js" crossorigin="anonymous"></script>
 
     <!-- Scripts -->
-    <script src="js/script.js" async></script>
     <script src="https://cdn.jsdelivr.net/gh/rick-liruixin/body-scroll-lock-upgrade@v1.1.0/lib/index.umd.js"></script>
     <script defer src="https://cdn.jsdelivr.net/npm/alpinejs@3.x.x/dist/cdn.min.js"></script>
 
@@ -77,7 +76,6 @@
             });
         });
     </script>
-
 
     @include('sweetalert::alert')
 

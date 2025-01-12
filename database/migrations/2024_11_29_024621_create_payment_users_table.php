@@ -15,9 +15,7 @@ return new class extends Migration
             $table->id();
             $table->unsignedBigInteger('transaction_id');
             $table->string('customer');
-            $table->enum('bank', ['BCA', 'BNI', 'Mandiri', 'BRI']);
             $table->integer('total');
-            $table->string('upload_receipt');
             $table->timestamp('upload_date')->nullable();
             $table->timestamp('updated_on')->nullable();
         });

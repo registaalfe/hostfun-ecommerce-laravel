@@ -15,9 +15,7 @@ class PaymentUser extends Model
     protected $fillable = [
         'transaction_id',
         'customer',
-        'bank',
         'total',
-        'upload_receipt',
         'upload_date',
         'updated_on',
     ];

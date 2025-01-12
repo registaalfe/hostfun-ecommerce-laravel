@@ -4,15 +4,12 @@ namespace App\Http\Controllers;
 
 use App\Models\Product;
 use App\Models\Transactions;
-use App\Models\Transactions_Item;
 use Illuminate\Http\Request;
+use App\Models\Transactions_Item;
 use Illuminate\Support\Facades\DB;
 
 class CheckoutController extends Controller
 {
-    /**
-     * Display a listing of the resource.
-     */
     public function index()
     {
         $products =
@@ -23,17 +20,14 @@ class CheckoutController extends Controller
         return view('users.product.index', compact('products'));
     }
 
-    /**
-     * Display the specified resource.
-     */
     public function show($id, Request $request)
     {
+        // dd($id);
         // ambil data produk
         $product = Product::findOrFail($id);
 
         // Ambil durasi yang dipilih oleh user, default ke 1 bulan jika tidak ada input
         $duration = $request->input('duration', 1);
-
 
         return view('users.product.details', compact('product'));
     }
@@ -61,17 +55,6 @@ class CheckoutController extends Controller
         ]);
     }
 
-    /**
-     * Show the form for creating a new resource.
-     */
-    public function create()
-    {
-        //
-    }
-
-    /**
-     * Store a newly created resource in storage.
-     */
     public function store(Request $request)
     {
         // Memastikan data yang masuk valid, jika data tidak valid, proses berhenti, dan error ditampilkan ke use
@@ -80,7 +63,6 @@ class CheckoutController extends Controller
             'product_id' => 'required|exists:products,id_product',
             'duration' => 'required|integer|in:1,3,6,12',
         ]);
-
 
         //Memastikan jika ada error selama proses, semua perubahan data akan dibatalkan, kita tidak mau data setengah jadi masuk ke database
         DB::beginTransaction();
@@ -97,7 +79,10 @@ class CheckoutController extends Controller
                 'transaction_date' => now(),
                 'update_on' => now(),
                 'status' => 'pending',
+                'snap_token' => 'snap_token',
             ]);
+
+            // dd($transaction);
 
             // Ambil data produk untuk menghitung subtotal
             $product = Product::findOrFail($request->product_id);
@@ -128,6 +113,13 @@ class CheckoutController extends Controller
     }
 
 
+    /**
+     * Show the form for creating a new resource.
+     */
+    public function create()
+    {
+        //
+    }
 
 
     /**
