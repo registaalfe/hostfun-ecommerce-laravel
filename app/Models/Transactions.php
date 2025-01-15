@@ -19,7 +19,6 @@ class Transactions extends Model
         'total_amount',
         'transaction_date',
         'status',
-        'snap_token',
     ];
 
     // Fungsi untuk membuat no_invoice

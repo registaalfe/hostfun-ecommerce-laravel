@@ -74,8 +74,7 @@ class UserPaymentController extends Controller
 
         // Kirim SnapToken ke view
         return view('users.product.payment', [
-            'transaction' => $transaction,  // Mengirimkan seluruh data transaksi ke view
-            'snapToken' => $transaction->snap_token,  // Mengirimkan SnapToken yang sudah di-generate
+            'transaction' => $transaction
         ]);
     }
 
@@ -95,7 +94,9 @@ class UserPaymentController extends Controller
             'total' => $request->input('total'),
         ];
 
-        $result = $this->checkoutService->processCheckout($data);
+        dd($data);
+
+        $result = $this->checkoutService->payment($data);
 
         return response()->json([
             'snap_token' => $result['snap_token'],

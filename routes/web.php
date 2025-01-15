@@ -28,7 +28,7 @@ Route::prefix('/')->group(function () {
         Route::post('/calculationSubtotal', [UserPaymentController::class, 'calculationSubtotal'])->name('calculationSubtotal');
         Route::post('/checkout', [UserPaymentController::class, 'checkout'])->name('checkout');
         Route::get('transaction/{id}/payment', [UserPaymentController::class, 'toPayment'])->name('payment');
-        Route::post('paymentStore', [UserPaymentController::class, 'store'])->name('paymentStore');
+        Route::post('processPayment', [UserPaymentController::class, 'processPayment'])->name('processPayment');
         Route::get('/finished', [UserPaymentController::class, 'finishpayment'])->name('finishpayment');
     });
     // Route::middleware('auth')->group(function () {

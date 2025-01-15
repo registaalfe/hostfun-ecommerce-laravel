@@ -1,9 +1,10 @@
 <x-users-transactions.layout>
 
     <div class="max-w-6xl mx-auto px-14 pt-12 pb-8 bg-[#F5F5F5] min-w-full min-h-full">
-        <form action="{{ route('paymentStore') }}" method="POST" enctype="multipart/form-data">
+        <form action="{{ route('processPayment') }}" method="POST" enctype="multipart/form-data">
             <input type="hidden" name="transaction_id" value="{{ $transaction->id }}" />
-            <input type="hidden" name="total_amount" value="{{ $transaction->total_amount }}" />
+            <input type="hidden" name="total" value="{{ $transaction->total_amount }}" />
+            <input type="hidden" name="customer" value="{{ auth()->user()->id }}">
 
             @csrf
             <div class="flex items-center justify-center pb-10 space-x-4">
