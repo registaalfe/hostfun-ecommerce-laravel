@@ -73,76 +73,12 @@ class UserPaymentController extends Controller
         $transaction = $this->checkoutService->processCheckout($validated);
 
         // Kirim SnapToken ke view
-        return view('users.product.payment', [
-            'transaction' => $transaction
-        ]);
-    }
-
-    // DONE 5 - MENGARAHKAN USER KE HALAMAN PEMBAYARAN
-    public function toPayment($id)
-    {
-        // Retrieve all categories to populate the dropdown
-        $transaction = Transactions::findOrFail($id);
-        return view('users.product.payment', compact('transaction'));
-    }
-
-    public function processPayment(Request $request)
-    {
-        $data = [
-            'transaction_id' => $request->input('transaction_id'),
-            'customer' => $request->input('customer'),
-            'total' => $request->input('total'),
-        ];
-
-        dd($data);
-
-        $result = $this->checkoutService->payment($data);
-
-        return response()->json([
-            'snap_token' => $result['snap_token'],
-            'transaction' => $result['transaction']
-        ]);
-    }
-
-    /**
-     * Store a newly created resource in storage.
-     */
-
-
-    public function finishPayment()
-    {
-        return view('users.product.finishpayment');
-    }
-
-    /**
-     * Show the form for creating a new resource.
-     */
-    public function create()
-    {
-        //
-    }
-
-    /**
-     * Show the form for editing the specified resource.
-     */
-    public function edit(string $id)
-    {
-        //
-    }
-
-    /**
-     * Update the specified resource in storage.
-     */
-    public function update(Request $request, string $id)
-    {
-        //
-    }
-
-    /**
-     * Remove the specified resource from storage.
-     */
-    public function destroy(string $id)
-    {
-        //
+        return view(
+            'users.product.payment',
+            [
+                'transaction' => $transaction,  // Mengirimkan seluruh data transaksi ke view
+                'snapToken' => $transaction->snap_token,  // Mengirimkan SnapToken yang sudah di-generate
+            ]
+        );
     }
 }

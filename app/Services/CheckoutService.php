@@ -112,7 +112,19 @@ class CheckoutService
                 'status' => 'pending',
             ]);
 
-            // dd($transaction['total_amount']);
+            //Membuat Snap Token Midtrans
+            $params = array(
+                'transaction_details' => array(
+                    'order_id' => $transaction->id,
+                    'gross_amount' => $subtotal,
+                )
+            );
+            // dd($params);
+
+            $snapToken = Snap::getSnapToken($params);
+            // Simpan transaksi utama menggunakan repository
+            $transaction->snap_token = $snapToken;
+            $transaction->save();
 
             // Simpan detail transaksi
             $this->storeTransactionItem($transaction, $product, $data['duration'], $subtotal);
@@ -144,64 +156,5 @@ class CheckoutService
             'qty' => $duration,
             'subtotal' => $subtotal,
         ]);
-    }
-
-    // GET SNAP TOKEN
-    public function payment($data)
-    {
-        DB::beginTransaction();
-
-        try {
-            // Ambil data transaksi berdasarkan ID
-            $transaction = $this->transactionRepository->findTransactionById($data['transaction_id']);
-
-            if (!$transaction) {
-                throw new \Exception("Transaksi tidak ditemukan.");
-            }
-
-            // Ambil data pelanggan berdasarkan customer_id
-            $customer = User::find($transaction->customer_id);
-
-            // Membuat Snap Token menggunakan Midtrans
-            $params = [
-                'transaction_details' => [
-                    'order_id' => $transaction->id,
-                    'gross_amount' => $data['total'],
-                ],
-                'customer_details' => [
-                    'first_name' => $customer->name,
-                ],
-            ];
-
-            $snapToken = \Midtrans\Snap::getSnapToken($params);
-
-            // Simpan pembayaran ke database melalui repository
-            $payment = $this->paymentRepository->createPayment([
-                'transaction_id' => $data['transaction_id'],
-                'customer' => $data['customer'],
-                'total' => $data['total'],
-                'snap_token' => $snapToken,
-                'status' => 'pending',
-                'payment_date' => now(),
-            ]);
-
-            DB::commit();
-
-            return [
-                'snap_token' => $snapToken,
-                'payment' => $payment,
-            ];
-        } catch (\Exception $e) {
-            DB::rollBack();
-
-            // Log error untuk debugging
-            Log::error('Payment processing error', [
-                'message' => $e->getMessage(),
-                'data' => $data,
-                'stack' => $e->getTraceAsString(),
-            ]);
-
-            throw $e;
-        }
     }
 }
