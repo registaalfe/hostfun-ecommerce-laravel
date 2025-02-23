@@ -81,4 +81,65 @@ class UserPaymentController extends Controller
             ]
         );
     }
+
+    // MEMERIKSA DAN MENGUBAH STATUS PAYMENT
+    // public function handleWebhook(Request $request)
+    // {
+    //     // Mengambil konfigurasi Server Key
+    //     $serverKey = config('midtrans.server_key');
+
+    //     // Validasi signature key dari Midtrans
+    //     $signatureKey = hash(
+    //         "sha512",
+    //         $request->order_id . $request->status_code . $request->gross_amount . $serverKey
+    //     );
+
+    //     // Memeriksa signatureKey sudah match atau belum antara value dan typenya
+    //     if ($signatureKey !== $request->signature_key) {
+    //         return response()->json(['message' => 'Invalid signature key'], 403);
+    //     }
+
+    //     // Cek status transaksi
+    //     $transaction = Transactions::find($request->order_id);
+
+    //     // Jika id transaksi tidak ditemukan maka kirim notif ini
+    //     if (!$transaction) {
+    //         return response()->json(['message' => 'Transaction not found'], 404);
+    //     }
+
+    //     // Mengubah status berdasarkan kondisi pembayaran user
+    //     if ($request->transaction_status == 'settlement' || $request->transaction_status == 'capture') {
+    //         $transaction->status = 'Completed'; // Status pembayaran berhasil
+    //     } elseif ($request->transaction_status == 'cancel' || $request->transaction_status == 'expire') {
+    //         $transaction->status = 'Cancelled'; // Status pembayaran gagal atau kadaluarsa
+    //     } elseif ($request->transaction_status == 'pending') {
+    //         $transaction->status = 'Pending'; // Status menunggu pembayaran
+    //     }
+
+    //     $transaction->save();
+
+    //     return response()->json(['message' => 'Webhook processed successfully']);
+    // }
+
+    public function callback(Request $request)
+    {
+        $serverKey = config('midtrans.server_key');
+        $hashed = hash("sha512", $request->order_id . $request->status_code . $request->gross_amount . $serverKey);
+        if ($hashed == $request->signature_key) {
+            if (
+                $request->transaction_status == 'capture' or $request->transaction_status == 'settlement'
+            ) {
+                $order = Transactions::find($request->order_id);
+                $order->update(['status' => 'Completed']);
+            }
+        }
+    }
+
+    public function paymentSuccess($id)
+    {
+        $transaction = Transactions::find($id);
+        dd($transaction);
+
+        return view('invoice', compact('transaction'));
+    }
 }

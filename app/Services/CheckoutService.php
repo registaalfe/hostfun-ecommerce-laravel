@@ -6,7 +6,6 @@ use Midtrans\Snap;
 use Midtrans\Config;
 use App\Models\Product;
 use App\Models\Transactions;
-use App\Models\User;
 use Illuminate\Support\Facades\DB;
 use Illuminate\Support\Facades\Log;
 use App\Repositories\TransactionRepositoryInterface;

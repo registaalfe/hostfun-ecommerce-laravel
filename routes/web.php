@@ -1,13 +1,18 @@
 <?php
 
+use Illuminate\Support\Facades\URL;
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\UserController;
 use App\Http\Controllers\AdminController;
 use App\Http\Controllers\LoginController;
 use App\Http\Controllers\ProductController;
-use App\Http\Controllers\CheckoutController;
 use App\Http\Controllers\UserPaymentController;
 use App\Http\Controllers\TransactionsController;
+
+// Force HTTPS for all routes
+if (env('APP_ENV')) {
+    URL::forceScheme('https');
+}
 
 Route::prefix('/')->group(function () {
     Route::get('/', [UserController::class, 'index'])->name('index');
@@ -15,6 +20,7 @@ Route::prefix('/')->group(function () {
     // Register User
     Route::get('/register', [LoginController::class, 'registerForm'])->name('register')->middleware('guest');
     Route::post('/store', [LoginController::class, 'store'])->name('store');
+
 
     // Login User
     Route::get('/login', [LoginController::class, 'loginForm'])->name('login')->middleware('guest');
@@ -27,20 +33,8 @@ Route::prefix('/')->group(function () {
         Route::get('product/{id}/detailProduct', [UserPaymentController::class, 'show'])->name('detailProduct');
         Route::post('/calculationSubtotal', [UserPaymentController::class, 'calculationSubtotal'])->name('calculationSubtotal');
         Route::post('/checkout', [UserPaymentController::class, 'checkout'])->name('checkout');
-        Route::get('transaction/{id}/payment', [UserPaymentController::class, 'toPayment'])->name('payment');
-        Route::post('processPayment', [UserPaymentController::class, 'processPayment'])->name('processPayment');
-        Route::get('/finished', [UserPaymentController::class, 'finishpayment'])->name('finishpayment');
+        Route::get('/payment-success/{id}', [UserPaymentController::class, 'paymentSuccess'])->name('payment.success');
     });
-    // Route::middleware('auth')->group(function () {
-    //     Route::get('/hosting', [UserPaymentController::class, 'index'])->name('hosting');
-    //     Route::get('product/{id}/detailProduct', [UserPaymentController::class, 'show'])->name('detailProduct');
-    //     Route::post('/calculation-subtotal', [UserPaymentController::class, 'calculationSubtotal'])->name('calculation.subtotal');
-    //     Route::post('/checkout', [UserPaymentController::class, 'checkout'])->name('checkout');
-    //     Route::get('transaction/{id}/payment', [UserPaymentController::class, 'index'])->name('payment');
-    //     Route::post('paymentStore', [UserPaymentController::class, 'store'])->name('paymentStore');
-    //     Route::get('/paygateway', [UserPaymentController::class, 'payGateway'])->name('paygateway');
-    //     Route::get('/finished', [UserPaymentController::class, 'finishpayment'])->name('finishpayment');
-    // });
 });
 
 Route::prefix('admin')->middleware('IsAdmin')->group(function () {

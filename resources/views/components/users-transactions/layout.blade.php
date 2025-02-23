@@ -26,8 +26,8 @@
     <!-- Scripts -->
     <script src="https://cdn.jsdelivr.net/gh/rick-liruixin/body-scroll-lock-upgrade@v1.1.0/lib/index.umd.js"></script>
     <script defer src="https://cdn.jsdelivr.net/npm/alpinejs@3.x.x/dist/cdn.min.js"></script>
-    <script type="text/javascript" src="https://app.stg.midtrans.com/snap/snap.js"
-        data-client-key="{{ config('midtrans.client_key') }}"></script>
+    <script src="https://app.sandbox.midtrans.com/snap/snap.js" data-client-key="{{ config('midtrans.client_key') }}">
+    </script>
 
 </head>
 
@@ -55,7 +55,7 @@
 
                 // Kirim data ke server menggunakan AJAX
                 $.ajax({
-                    url: '{{ route('calculationSubtotal') }}',
+                    url: '{{ route('calculationSubtotal') }}', // Use the route helper directly
                     type: 'POST',
                     data: {
                         _token: '{{ csrf_token() }}',
@@ -64,7 +64,7 @@
                     },
                     success: function(response) {
                         if (response.success) {
-                            // Update subtotal dengan nilai dari server
+                            // Update subtotal with value from server
                             $('#subtotal').text('Rp. ' + response.formatted_subtotal);
                         } else {
                             alert('Failed to calculate subtotal');
