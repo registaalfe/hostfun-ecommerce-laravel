@@ -62,7 +62,7 @@
         @endif
 
         function editing(button) {
-            event.preventDefault();
+            event.preventDefault(); // To stop auto submit action button
             Swal.fire({
                 title: "Are you sure want to edit?",
                 text: "You won't be able to revert this!",
@@ -89,7 +89,7 @@
         @endif
 
         function deleting(button) {
-            event.preventDefault();
+            event.preventDefault(); // To stop auto submit action button
             Swal.fire({
                 title: "Are you sure?",
                 text: "You won't be able to revert this!",
