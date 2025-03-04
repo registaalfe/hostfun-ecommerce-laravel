@@ -76,7 +76,7 @@
             window.snap.pay('{{ $snapToken }}', {
                 onSuccess: function(result) {
                     /* You may add your own js here, this is just example */
-                    window.location.href = '/invoice/{{ $transaction->id }}'
+                    window.location.href = '/payment-success/{{ $transaction->id }}'
                 },
                 onPending: function(result) {
                     /* You may add your own js here, this is just example */

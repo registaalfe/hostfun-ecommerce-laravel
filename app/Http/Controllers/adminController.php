@@ -38,7 +38,7 @@ class AdminController extends Controller
         CategoryProduct::create($request->all());
 
         return redirect()->route('admin.showCategory')
-            ->with('success', 'Article created successfully.');
+            ->with(key: 'added', value: true);
     }
 
     public function editCategory(CategoryProduct $categories)
@@ -54,15 +54,32 @@ class AdminController extends Controller
 
         $categories->update($request->all());
 
+        // Set session flash message dynamically
+        session()->flash('alert', [
+            'type' => 'success', // 'success', 'error', 'warning', 'info'
+            'title' => 'Success Edited Category',
+            'message' => 'Successfully edited category.'
+        ]);
+
         return redirect()->route('admin.showCategory')
-            ->with('success', 'Article updated successfully.');
+            ->with(key: 'edited', value: true);
     }
 
     public function destroy(CategoryProduct $categories)
     {
+        // Delete all products linked to this category
+        $categories->products()->delete(); // Assuming `products()` is the relation in the model
+
         $categories->delete();
 
+        // Set session flash message dynamically
+        session()->flash('alert', [
+            'type' => 'success', // 'success', 'error', 'warning', 'info'
+            'title' => 'Deleted!',
+            'message' => 'Your category has been deleted successfully.'
+        ]);
+
         return redirect()->route('admin.showCategory')
-            ->with('success', 'Article deleted successfully.');
+            ->with(key: 'deleted', value: true);
     }
 }

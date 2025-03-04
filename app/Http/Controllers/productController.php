@@ -44,11 +44,11 @@ class ProductController extends Controller
 
         Alert::success(
             'Success Added Product',
-            'Success Message'
+            'Successfully added new product.'
         );
 
         // Redirect or return success message
-        return redirect()->route('admin.showProduct')->with('success', 'Product created successfully.');
+        return redirect()->route('admin.showProduct')->with(key: 'added', value: true);
     }
 
     public function editProduct($id)
@@ -84,7 +84,14 @@ class ProductController extends Controller
         // Update produk
         $product->update($validatedData);
 
-        return redirect()->route('admin.showProduct')->with('success', 'Product updated successfully.');
+        // Set session flash message dynamically
+        session()->flash('alert', [
+            'type' => 'success', // 'success', 'error', 'warning', 'info'
+            'title' => 'Success Edited Product',
+            'message' => 'Successfully edited product.'
+        ]);
+
+        return redirect()->route('admin.showProduct')->with(key: 'edited', value: true);
     }
 
     public function destroyProduct($id)
@@ -96,7 +103,14 @@ class ProductController extends Controller
         File::delete(storage_path('app/public/' . $product->image_path));
         $product->delete();
 
+        // Set session flash message dynamically
+        session()->flash('alert', [
+            'type' => 'success', // 'success', 'error', 'warning', 'info'
+            'title' => 'Deleted!',
+            'message' => 'Your product has been deleted successfully.'
+        ]);
+
         // Redirect atau kirim pesan sukses
-        return redirect()->route('admin.showProduct')->with('success', 'Product deleted successfully.');
+        return redirect()->route('admin.showProduct')->with(key: 'deleted', value: true);
     }
 }

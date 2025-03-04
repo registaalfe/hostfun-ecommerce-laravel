@@ -61,7 +61,7 @@
                             <form action="{{ route('admin.destroyProduct', $product->id_product) }}" method="POST">
                                 @csrf
                                 @method('DELETE')
-                                <button type="submit"
+                                <button type="submit" onclick="deleting(this)"
                                     class="font-karla px-1.5 py-1 rounded-sm text-white bg-[#FC595B] flex items-center space-x-2 mr-2 hover:bg-[#F81F25]"><svg
                                         xmlns="http://www.w3.org/2000/svg" width="20" height="20"
                                         viewBox="0 0 24 24">

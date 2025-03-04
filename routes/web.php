@@ -52,7 +52,7 @@ Route::prefix('admin')->middleware('IsAdmin')->group(function () {
     Route::post('/storeProduct', [ProductController::class, 'storeProduct'])->name('admin.storeProduct');
     Route::get('product/{id}/editProduct', [ProductController::class, 'editProduct'])->name('admin.editProduct');
     Route::match(['get', 'post'], 'product/{id}/updateProduct', [ProductController::class, 'updateProduct'])->name('admin.updateProduct');
-    Route::delete('product/{id}/destroyProduct', [ProductController::class, 'destroyProduct'])->name('admin.destroyProduct');
+    Route::delete('product/destroyProduct/{id}', [ProductController::class, 'destroyProduct'])->name('admin.destroyProduct');
 
     // Transactions
     Route::get('/transactions', [TransactionsController::class, 'index'])->name('admin.showTransactions');
