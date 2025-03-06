@@ -33,7 +33,7 @@
     <!-- end: Sidebar -->
 
     <!-- start: Main -->
-    <main id="main-content" class="elementor-top-section min-h-screen transition-all header-expanded">
+    <main id="main-content" class="elementor-top-section min-h-screen transition-all header-expanded bg-[#F6F8FD]">
         <!-- start: Header -->
         <x-header></x-header>
         <!-- end: Header -->

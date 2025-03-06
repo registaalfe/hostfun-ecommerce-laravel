@@ -1,5 +1,5 @@
     <!-- I have not failed. I've just found 10,000 ways that won't work. - Thomas Edison -->
-    <div class="py-4 px-6 bg-white w-full flex justify-between items-center sticky top-0 left-0 z-30 transition-all">
+    <div class="py-4 px-6 bg-[#F6F8FD] w-full flex justify-between items-center sticky top-0 left-0 z-30 transition-all">
         <div class="left-item flex">
             <button id="toggle-sidebar"
                 class="flex px-2 py-2 text-gray-400 rounded-lg mr-4 border focus:outline-none hover:bg-[#0165FF] hover:border-none hover:text-white">
