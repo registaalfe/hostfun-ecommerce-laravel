@@ -1,0 +1,14 @@
+# Exported from Render on 2025-04-06T14:21:45Z
+services:
+- type: web
+  name: hostfun
+  runtime: node
+  repo: https://github.com/registaalfe/hostfun
+  plan: free
+  envVars:
+  - key: APP_ENV
+    sync: false
+  region: oregon
+  buildCommand: composer install
+  startCommand: php artisan serve
+version: "1"
