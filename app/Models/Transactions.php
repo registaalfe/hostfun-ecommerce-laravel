@@ -2,8 +2,9 @@
 
 namespace App\Models;
 
+use App\Models\User;
+use App\Models\Transactions_Item;
 use Illuminate\Database\Eloquent\Model;
-use Illuminate\Database\Eloquent\Relations\HasMany;
 use Illuminate\Database\Eloquent\Factories\HasFactory;
 
 class Transactions extends Model
@@ -31,9 +32,14 @@ class Transactions extends Model
         return 'INV' . date('Ymd') . str_pad($nextId, 4, '0', STR_PAD_LEFT);
     }
 
-    // Relationship with Payment
-    public function payments(): HasMany
+    // Relationship with Product
+    public function transaction_items()
     {
-        return $this->hasMany(PaymentUser::class, 'transaction_id');
+        return $this->hasMany(Transactions_Item::class, 'transaction_id');
+    }
+
+    public function user()
+    {
+        return $this->belongsTo(User::class, 'customer_id');
     }
 }

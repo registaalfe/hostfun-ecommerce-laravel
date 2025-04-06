@@ -48,4 +48,64 @@ table.dataTable > thead > tr > th,
 table.dataTable > thead > tr > td {
   padding: 10px;
   border-bottom: 0px !important;
+}
+
+table.dataTable th.dt-type-numeric,
+table.dataTable th.dt-type-date,
+table.dataTable td.dt-type-numeric,
+table.dataTable td.dt-type-date {
+  text-align: center !important;
+}
+
+table.dataTable thead > tr > th.dt-orderable-asc,
+table.dataTable thead > tr > th.dt-orderable-desc,
+table.dataTable thead > tr > td.dt-orderable-asc,
+table.dataTable thead > tr > td.dt-orderable-desc {
+  padding: 16px 32px 16px 30px !important;
+}
+
+#example thead {
+  background-color: #e9ecef;
+  border-bottom: 2px solid #34364a !important;
+}
+
+#example tr {
+  background-color: #ffffff !important;
+  border-bottom: 0.5px solid #e5e7eb !important;
+}
+
+#example th:nth-child(1) {
+  text-align: left !important;
+  width: 10% !important;
+} /* No. */
+#example th:nth-child(2) {
+  width: 20% !important;
+  text-align: left !important;
+} /* Name Product */
+#example th:nth-child(3) {
+  width: 15% !important;
+  text-align: left !important;
+} /* Price */
+#example th:nth-child(4) {
+  width: 40% !important;
+  text-align: left !important;
+} /* Qty */
+#example th:nth-child(5) {
+  width: 60% !important;
+  text-align: left !important;
+} /* Qty */
+#example td:nth-child(1) {
+  text-align: left !important;
+}
+
+#example td:nth-child(2) {
+  text-align: left !important;
+}
+
+#example td:nth-child(3) {
+  text-align: left !important;
+}
+
+#example td:nth-child(4) {
+  text-align: left !important;
 }/*# sourceMappingURL=admin.css.map */

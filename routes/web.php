@@ -56,4 +56,7 @@ Route::prefix('admin')->middleware('IsAdmin')->group(function () {
 
     // Transactions
     Route::get('/transactions', [TransactionsController::class, 'index'])->name('admin.showTransactions');
+    Route::get('/transactions/{id}/invoice', [TransactionsController::class, 'show'])->name('admin.showInvoice');
+    Route::get('/transactions/{id}/export-pdf', [TransactionsController::class, 'exportPDF'])->name('exportPDF');
+    Route::get('/transaction/{id}/qr', [TransactionsController::class, 'showQR'])->name('transaction.qr');
 });

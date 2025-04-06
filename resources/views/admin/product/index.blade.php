@@ -1,10 +1,12 @@
 <x-admin.layout>
-    <div class="elementor-section flex flex-col p-8 min-h-screen bg-[#F7F9FB]">
-        <div class="flex flex-row justify-between mb-8">
-            <h1 class="text-2xl font-semibold text-[#161519]">Product</h1>
+    <div class="flex flex-col ml-8 mt-6">
+        <h1 class="font-karla text-2xl font-bold text-[#34364A]">Product</h1>
+    </div>
+    <div class="elementor-section flex flex-col mt-4 m-8 p-6 min-h-screen bg-white rounded-xl">
+        <div class="flex flex-row justify-between pb-8 border-b-[1px] mb-8">
             <a href="{{ route('admin.createProduct') }}">
                 <span
-                    class="text-sm font-karla px-3 py-2.5 items-center rounded-lg bg-[#0165FF] hover:bg-[#12294A] text-white">+
+                    class="text-sm font-karla px-3 py-2.5 items-center rounded-lg bg-[#335EF7] hover:bg-[#34364A] text-white">+
                     Add
                     Product</span>
             </a>
@@ -13,41 +15,39 @@
         <table id="" class="display min-w-full table-auto">
             <thead class="bg-[#F7F9FB] border sticky -top-0.5 z-999999">
                 <tr>
-                    <th class="px-6 py-3 w-0 text-left text-sm text-[#161519] tracking-wider">
-                        <input type="checkbox" class="form-checkbox h-4 w-4 text-0165FF">
-                    </th>
-                    <th class="px-6 py-3 font-karla text-left text-sm font-semibold text-[#161519] tracking-wider">
+                    <th class="px-6 py-3 w-0 text-center text-sm text-[#34364A] tracking-wider">No.</th>
+                    <th class="px-6 py-3 font-karla text-left text-sm font-semibold text-[#34364A] tracking-wider">
                         Name Product
                     </th>
-                    <th class="px-6 py-3 font-karla text-left text-sm font-semibold text-[#161519] tracking-wider">
+                    <th class="px-6 py-3 font-karla text-left text-sm font-semibold text-[#34364A] tracking-wider">
                         Category Product
                     </th>
-                    <th class="px-6 py-3 font-karla text-left text-sm font-semibold text-[#161519] tracking-wider">
+                    <th class="px-6 py-3 font-karla text-left text-sm font-semibold text-[#34364A] tracking-wider">
                         Price Product
                     </th>
-                    <th class="px-6 py-3 font-karla text-left text-sm font-semibold text-[#161519] tracking-wider">
+                    <th class="px-6 py-3 font-karla text-left text-sm font-semibold text-[#34364A] tracking-wider">
                         Action</th>
                 </tr>
             </thead>
-            <tbody class="bg-white">
-                @foreach ($products as $product)
+            <tbody class="bg-white font-karla">
+                @foreach ($products as $index => $product)
                     <tr>
-                        <td class="px-6 py-4 whitespace-nowrap">
-                            <input type="checkbox" class="form-checkbox h-4 w-4 text-0165FF">
+                        <td class="px-6 py-4 whitespace-nowrap text-sm font-semibold text-[#34364A]">
+                            {{ str_pad($index + 1, 2, '0', STR_PAD_LEFT) }}
                         </td>
-                        <td class="px-6 py-4 whitespace-nowrap text-sm font-normal text-[#161519]">
+                        <td class="px-6 py-4 whitespace-nowrap text-sm font-normal text-[#34364A]">
                             {{ $product->name_product }}
                         </td>
-                        <td class="px-6 py-4 whitespace-nowrap text-sm font-normal text-[#161519]">
+                        <td class="px-6 py-4 whitespace-nowrap text-sm font-normal text-[#34364A]">
                             {{ $product->category->name }}
                         </td>
-                        <td class="px-6 py-4 whitespace-nowrap text-sm font-normal text-[#161519]">
+                        <td class="px-6 py-4 whitespace-nowrap text-sm font-normal text-[#34364A]">
                             Rp. {{ number_format($product->price_product, 2, ',', '.') }}
                         </td>
                         <td
                             class="flex flex-row px-6 py-4 justify-end whitespace-nowrap text-sm font-normal text-right">
                             <a href="{{ route('admin.editProduct', $product->id_product) }}"
-                                class="px-1.5 py-1 rounded-sm text-white bg-[#0165FF] flex items-center space-x-2 mr-2 hover:bg-[#12294A]"><svg
+                                class="font-karla px-1.5 py-1 rounded-sm text-white bg-[#335EF7] flex items-center space-x-2 mr-2 hover:bg-[#34364A]"><svg
                                     xmlns="http://www.w3.org/2000/svg" width="18" height="18"
                                     viewBox="0 0 24 24">
                                     <g fill="none">

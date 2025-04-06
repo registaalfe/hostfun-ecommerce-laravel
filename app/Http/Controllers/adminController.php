@@ -5,7 +5,7 @@ namespace App\Http\Controllers;
 use App\Models\Product;
 use Illuminate\Http\Request;
 use App\Models\CategoryProduct;
-use App\Models\PaymentUser;
+use App\Models\Transactions;
 
 class AdminController extends Controller
 {
@@ -13,9 +13,14 @@ class AdminController extends Controller
     {
         $categoryCount = CategoryProduct::count();
         $productCount = Product::count();
-        $transactionCount = PaymentUser::count();
+        $transactionCount = Transactions::count();
 
-        return view('admin.dashboard.index', compact('categoryCount', 'productCount', 'transactionCount'));
+        return view('admin.dashboard.index', [
+            'title' => 'Dashboard Admin',
+            'categoryCount' => $categoryCount,
+            'productCount' => $productCount,
+            'transactionCount' => $transactionCount,
+        ]);
     }
 
     public function showCategory()

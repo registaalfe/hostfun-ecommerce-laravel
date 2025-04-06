@@ -1,16 +1,16 @@
     <!-- Nothing in life is to be feared, it is only to be understood. Now is the time to understand more, so that we may fear less. - Marie Curie -->
     <div id="sidebar"
-        class="fixed left-0 top-0 h-full z-50 px-8 pb-8 pt-3 bg-[#0165FF] shadow-lg sidebar-expanded transition-all duration-300">
+        class="fixed left-0 top-0 h-full z-50 px-8 pb-8 pt-3 bg-white shadow-lg sidebar-collapsed transition-all duration-300">
         <div class="flex justify-center items-center py-4 border-b">
             <div class="flex items-center">
-                <img class="h-6 w-auto" src="/images/icon.png" alt="hostfun">
-                <h2 class="nav-link-text font-karla text-xl text-white font-bold pl-2">Hostfun</h2>
+                <img class="h-8 w-auto" src="/images/icons.png" alt="hostfun">
+                <h2 class="nav-link-text font-karla text-xl text-[#34364A] font-bold pl-2">Hostfun</h2>
             </div>
         </div>
 
-        <nav class="flex-1 px-2 py-4 space-y-1 bg-[#0165FF]">
+        <nav class="flex-1 px-2 py-4 space-y-1 bg-white">
             <a href="{{ route('admin.dashboard') }}"
-                class="flex items-center px-6 py-2 text-sm font-medium text-white rounded-lg hover:bg-[#12294A]">
+                class="flex items-center px-6 py-2 text-sm font-medium text-[#34364A] rounded-lg hover:bg-[#335EF7] hover:text-[#FEFEFF]">
                 <span class="nav-link-icon">
                     <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24">
                         <path fill="currentColor" fill-rule="evenodd"
@@ -21,7 +21,7 @@
                 <span class="nav-link-text font-karla pl-2">Dashboard</span>
             </a>
             <a href="{{ route('admin.showCategory') }}"
-                class="flex items-center px-6 py-2 text-sm font-medium text-white rounded-lg hover:bg-[#12294A]">
+                class="flex items-center px-6 py-2 text-sm font-medium text-[#34364A] rounded-lg hover:bg-[#335EF7] hover:text-[#FEFEFF]">
                 <span class="nav-link-icon">
                     <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24">
                         <path fill="currentColor"
@@ -31,7 +31,7 @@
                 <span class="nav-link-text font-karla pl-2">Category</span>
             </a>
             <a href="{{ route('admin.showProduct') }}"
-                class="flex items-center px-6 py-2 text-sm font-medium text-white rounded-lg hover:bg-[#12294A]">
+                class="flex items-center px-6 py-2 text-sm font-medium text-[#34364A] rounded-lg hover:bg-[#335EF7] hover:text-[#FEFEFF]">
                 <span class="nav-link-icon">
                     <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24">
                         <path fill="currentColor"
@@ -41,7 +41,7 @@
                 <span class="nav-link-text font-karla pl-2">Product</span>
             </a>
             <a href="{{ route('admin.showTransactions') }}"
-                class="flex items-center px-6 py-2 text-sm font-medium text-white rounded-lg hover:bg-[#12294A]">
+                class="flex items-center px-6 py-2 text-sm font-medium text-[#34364A] rounded-lg hover:bg-[#335EF7] hover:text-[#FEFEFF]">
                 <span class="nav-link-icon">
                     <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 1024 1024">
                         <path fill="currentColor"
@@ -56,7 +56,7 @@
             <form method="POST" action="{{ route('logout') }}">
                 @csrf
                 <button type="submit"
-                    class="flex items-center w-full px-6 py-2 text-sm font-medium text-white rounded-lg hover:bg-[#12294A]">
+                    class="flex items-center w-full px-6 py-2 text-sm font-medium text-[#34364A] rounded-lg hover:bg-[#335EF7] hover:text-[#FEFEFF]">
                     <span class="nav-link-icon">
                         <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24">
                             <path fill="currentColor"

@@ -14,7 +14,6 @@ class ProductController extends Controller
 {
     public function showProduct(Request $request)
     {
-
         // Mengambil semua produk dengan pagination
         $products = Product::with('category')->latest()->get(); //Pagination untuk untuk menghindari mengambil terlalu banyak data sekaligus 
         return view('admin.product.index', compact('products'));

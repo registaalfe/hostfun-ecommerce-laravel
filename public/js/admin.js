@@ -4,6 +4,10 @@ document.addEventListener("DOMContentLoaded", function () {
     const mainContent = document.getElementById("main-content");
     const toggleSidebarButton = document.getElementById("toggle-sidebar");
 
+    // Ensure sidebar starts collapsed
+    sidebar.classList.add("sidebar-collapsed");
+    mainContent.classList.add("header-collapsed");
+
     // Pastikan elemen-elemen yang dibutuhkan ada
     if (sidebar && mainContent && toggleSidebarButton) {
         // Function yg berfungsi untuk mengubah sidebar dari false ke true

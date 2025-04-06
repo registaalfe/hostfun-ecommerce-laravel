@@ -1,41 +1,42 @@
 <x-admin.layout>
-    <div class="elementor-section flex flex-col p-8 min-h-screen bg-[#F7F9FB]">
-        <div class="flex flex-row justify-between mb-8">
-            <h1 class="text-2xl font-semibold text-[#161519]">Category</h1>
+    <div class="flex flex-col ml-8 mt-6">
+        <h1 class="font-karla text-2xl font-bold text-[#34364A]">Category</h1>
+    </div>
+    <div class="elementor-section flex flex-col mt-4 m-8 p-6 min-h-screen bg-[#FEFEFF] rounded-xl">
+        <div class="flex flex-row justify-between pb-8 border-b-[1px] mb-8">
             <a href="{{ route('admin.createCategory') }}">
                 <span
-                    class="text-sm font-karla px-3 py-2.5 items-center rounded-lg bg-[#0165FF] hover:bg-[#12294A] text-white">+
+                    class="text-sm font-karla px-3 py-2.5 items-center rounded-lg bg-[#335EF7] hover:bg-[#34364A] text-[#FEFEFF]">+
                     Add
                     Category</span>
             </a>
         </div>
-        <table id="" class="display min-w-full table-auto">
+        <table id="" class="display min-w-full table-auto mt-4">
             <thead class="bg-[#F7F9FB]">
                 <tr>
-                    <th class="px-6 py-3 w-0 text-left text-sm text-[#161519] tracking-wider">
-                        <input type="checkbox" class="form-checkbox h-4 w-4 text-0165FF">
-                    </th>
-                    <th class="px-6 py-3 font-karla text-left text-sm font-semibold text-[#161519] tracking-wider">
+                    <th class="px-6 py-3 w-0 text-center text-sm text-[#34364A] tracking-wider">No.</th>
+                    <th class="px-6 py-3 font-karla text-left text-sm font-semibold text-[#34364A] tracking-wider">
                         Name
                     </th>
                     <th
-                        class="px-6 py-3 font-karla text-left text-sm font-semibold text-[#161519] tracking-wider w-[150px]">
+                        class="px-6 py-3 font-karla text-left text-sm font-semibold text-[#34364A] tracking-wider w-[150px]">
                         Action</th>
                 </tr>
             </thead>
-            <tbody class="bg-white">
-                @foreach ($categories as $category)
+            <tbody class="bg-[#FEFEFF]">
+                @foreach ($categories as $index => $category)
                     <tr>
-                        <td class="px-6 py-4 align-middle whitespace-nowrap">
-                            <input type="checkbox" class="form-checkbox h-4 w-4 text-0165FF">
+                        <td class="px-6 py-4 [#FEFEFF]space-nowrap text-sm font-semibold text-[#34364A]">
+                            {{ str_pad($index + 1, 2, '0', STR_PAD_LEFT) }}
                         </td>
-                        <td class="px-6 py-4 align-middle whitespace-nowrap text-sm font-normal text-[#161519]">
+                        <td
+                            class="px-6 py-4 align-middle [#FEFEFF]space-nowrap text-sm font-karla font-normal text-[#34364A]">
                             {{ $category->name }}
                         </td>
                         <td
-                            class="btn-action flex flex-row align-middle justify-end whitespace-nowrap text-sm font-normal text-right w-[150px]">
+                            class="btn-action flex flex-row align-middle justify-end [#FEFEFF]space-nowrap text-sm font-normal text-right w-[150px]">
                             <a href="{{ route('admin.editCategory', $category->id) }}"
-                                class="px-1.5 py-1 rounded-sm text-white bg-[#0165FF] flex items-center space-x-2 mr-2 hover:bg-[#12294A]"><svg
+                                class="font-karla px-1.5 py-1 rounded-sm text-[#FEFEFF] bg-[#335EF7] flex items-center space-x-2 mr-2 hover:bg-[#34364A]"><svg
                                     xmlns="http://www.w3.org/2000/svg" width="18" height="18"
                                     viewBox="0 0 24 24">
                                     <g fill="none">
@@ -50,7 +51,7 @@
                                 @csrf
                                 @method('DELETE')
                                 <button type="submit" onclick="deleting(this)"
-                                    class="font-karla px-1.5 py-1 rounded-sm text-white bg-[#FC595B] flex items-center space-x-2 mr-2 hover:bg-[#F81F25]"><svg
+                                    class="font-karla px-1.5 py-1 rounded-sm text-[#FEFEFF] bg-[#FC595B] flex items-center space-x-2 mr-2 hover:bg-[#F81F25]"><svg
                                         xmlns="http://www.w3.org/2000/svg" width="20" height="20"
                                         viewBox="0 0 24 24">
                                         <path fill="currentColor"
