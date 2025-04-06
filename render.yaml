@@ -10,5 +10,5 @@ services:
         sync: false
     region: oregon
     buildCommand: npm install
-    startCommand: npm run start
+    startCommand: php artisan migrate
 version: "1"
