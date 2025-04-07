@@ -43,10 +43,10 @@
                                     #{{ $transaction->no_invoice }}
                                 </td>
                                 <td class="px-6 py-4 whitespace-nowrap text-sm font-semibold text-[#34364A]">
-                                    {{ $transaction_item->product_id }}
+                                    {{ optional($transaction_item->production)->name_product ?? 'Unknown Product' }}
                                 </td>
                                 <td class="px-6 py-4 whitespace-nowrap text-sm font-semibold text-[#34364A]">
-                                    {{ number_format($transaction_item->qty) }}
+                                    {{ number_format($transaction_item->qty) }} Month
                                 </td>
                                 <td class="px-6 py-4 whitespace-nowrap text-sm font-semibold text-[#34364A]">
                                     Rp. {{ number_format($transaction_item->subtotal, 2, ',', '.') }}
@@ -89,7 +89,7 @@
                                     </form>
 
                                     <a href="{{ route('admin.showInvoice', $transaction->id) }}" target="_blank"
-                                        class="font-karla px-1.5 py-1 rounded-sm text-white bg-green-700 flex items-center space-x-2 mr-2 hover:bg-[#43ac79]">
+                                        class="font-karla px-1.5 py-1 rounded-sm text-white bg-[#40C171] flex items-center space-x-2 mr-2 hover:bg-[#43ac79]">
                                         <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18"
                                             viewBox="0 0 24 24">
                                             <g fill="none">

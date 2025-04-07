@@ -36,7 +36,7 @@
                     BACK</span>
                 </a>
             </div>
-            <div class="bg-white shadow-md rounded-lg p-6 border-t-2 border-[#335EF7]">
+            <div class="bg-white shadow-md rounded-lg p-6 border-t-2 border-[#335EF7] mb-20">
                 <div class="mb-6">
                     <div class="flex flex-row justify-between mb-6">
                         <div class="text-left">
@@ -131,30 +131,31 @@
                         </tr>
                     </tbody>
                     <tfoot>
-                        <tr>
-                            <th>Total Pembayaran</th>
-                            <th>Rp. {{ number_format($transaction->total_amount ?? 0, 2, ',', '.') }}</th>
+                        <tr class="font-karla">
+                            <th></th>
+                            <th></th>
+                            <th></th>
+                            <th class="colth text text">Total</th>
+                            <th class="sub-colth textc">Rp.
+                                {{ number_format($transaction->total_amount ?? 0, 2, ',', '.') }}
+                            </th>
                         </tr>
                     </tfoot>
                 </table>
 
-                <div class="flex justify-center border-t-2">
-                    <div class="flex my-6">
+                <div class="flex justify-end">
+                    <div class="flex">
                         <a href="{{ route('exportPDF', ['id' => $transaction->id ?? 0]) }}"
                             class="font-karla px-4 py-2 rounded text-[#FEFEFF] bg-[#335EF7] flex items-center space-x-2 mr-2 hover:bg-[#34364A]">
                             Export PDF
                         </a>
-                    </div>
-
-                    <div class="flex my-6 items-center">
                         <button onclick="showQR({{ $transaction->id }})"
-                            class="flex items-center bg-[#4CC38A] text-white px-6 py-2 rounded hover:bg-indigo-700">
+                            class="flex items-center bg-[#335EF7] text-white px-6 py-2 rounded hover:bg-[#34364A]">
                             Cetak QR
                         </button>
                     </div>
                 </div>
             </div>
-
         </div>
 
     </main>

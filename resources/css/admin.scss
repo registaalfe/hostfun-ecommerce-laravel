@@ -80,10 +80,13 @@ table.dataTable thead > tr > td.dt-orderable-desc {
     border-bottom: 2px solid #34364a !important;
 }
 
-#example tr {
-    background-color: #ffffff !important;
+#example thead tr {
+    background-color: #eff2f4 !important;
+}
 
+#example tr {
     border-bottom: 0.5px solid #e5e7eb !important;
+    border-top: 0.5px solid #e5e7eb !important;
 }
 
 #example th:nth-child(1) {
@@ -91,19 +94,19 @@ table.dataTable thead > tr > td.dt-orderable-desc {
     width: 10% !important;
 } /* No. */
 #example th:nth-child(2) {
-    width: 20% !important;
+    width: 30% !important;
     text-align: left !important;
 } /* Name Product */
 #example th:nth-child(3) {
-    width: 15% !important;
+    width: 30% !important;
     text-align: left !important;
 } /* Price */
 #example th:nth-child(4) {
-    width: 40% !important;
+    width: 30% !important;
     text-align: left !important;
 } /* Qty */
 #example th:nth-child(5) {
-    width: 60% !important;
+    width: 30% !important;
     text-align: left !important;
 } /* Qty */
 
@@ -120,10 +123,27 @@ table.dataTable thead > tr > td.dt-orderable-desc {
     text-align: left !important;
 }
 
-// #example tfoot tr th:nth-child(1) {
-//     width: 60% !important;
-//     text-align: left !important;
-// }
-// #example tfoot tr th:nth-child(2) {
-//     text-align: left !important;
-// }
+#example tfoot tr {
+    border-bottom: 0 !important;
+    border-top: 0 !important;
+}
+
+#example tfoot tr th {
+    font-weight: normal !important;
+}
+
+#example tfoot tr .colth {
+    font-weight: 500 !important;
+    padding-top: 24px !important;
+}
+
+#example tfoot tr .sub-colth {
+    font-weight: 800 !important;
+    padding-top: 24px !important;
+    font-size: 18px !important;
+    color: #335ef7 !important;
+}
+
+div.dt-container {
+    margin: 0 !important;
+}
